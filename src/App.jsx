@@ -47,7 +47,7 @@ const App = () => {
       {/* Hero Section */}
       <motion.section
         id="home"
-        className="bg-[linear-gradient(135deg,#ffffff_0%,#dbeadf_50%,#588157_100%)] min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 py-16 md:pt-4 md:pb-24 lg:pt-38 lg:pb-24"
+        className="bg-[linear-gradient(135deg,#ffffff_0%,#dbeadf_50%,#588157_100%)] min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 py-16 md:pt-4 md:pb-24 lg:pt-32 lg:pb-24"
         variants={container}
         initial="hidden"
         whileInView="visible"

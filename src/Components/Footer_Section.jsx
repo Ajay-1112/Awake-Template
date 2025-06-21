@@ -45,7 +45,7 @@ export default function AwakeFooter() {
   };
 
   return (
-    <footer className=" text-primary mb-10 py-10 md:py-16 px-6">
+    <footer className=" text-primary  py-10 md:py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo and Description */}
