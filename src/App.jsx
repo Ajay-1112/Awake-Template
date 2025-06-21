@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { Star } from "lucide-react";
 import Button from "./Components/Button";
 import LogoMarquee from "./Components/Marquee";
 import Navbar from "./Components/Navbar/Navbar";
@@ -74,8 +74,51 @@ const App = () => {
           At Awake, we help small startups tackle the world's biggest challenges
           with tailored solutions—guiding you from strategy to success.
         </motion.p>
-        <motion.div variants={fadeUp}>
+
+        <motion.div
+          className="text-center md:flex gap-5 items-center"
+          variants={fadeUp}
+        >
           <Button text="Get Started" link="#Services" />
+          <div className="md:flex gap-5 mt-6 md:mt-0 justify-center items-center space-y-3 ">
+            <div className="flex mt-2 items-center justify-center">
+              <img
+                className="h-8 w-8 -mx-1 ring-2 ring-white rounded-full object-cover shadow-md"
+                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=880&h=880&q=100"
+                alt="Client 1"
+              />
+              <img
+                className="h-8 w-8 -mx-1 ring-2 ring-white rounded-full object-cover shadow-md"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=687&h=687&q=80"
+                alt="Client 2"
+              />
+              <img
+                className="h-8 w-8 -mx-1 ring-2 ring-white rounded-full object-cover shadow-md"
+                src="https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=686&h=686&q=80"
+                alt="Client 3"
+              />
+              <img
+                className="h-8 w-8 -mx-1 ring-2 ring-white rounded-full object-cover shadow-md"
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=880&h=880&q=80"
+                alt="Client 4"
+              />
+            </div>
+            <div className="flex flex-col justify-center text-center">
+              {/* Star Rating */}
+              <div className="flex md:justify-start justify-center items-center space-x-1">
+                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                <Star className="h-4 w-4 fill-gray-200 text-gray-200" />
+              </div>
+
+              {/* Trust Text */}
+              <p className="text-light-text text-sm font-medium">
+                Trusted by 1000+ clients
+              </p>
+            </div>
+          </div>
         </motion.div>
       </motion.section>
       <LogoMarquee />
