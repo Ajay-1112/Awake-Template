@@ -57,7 +57,7 @@ const LogoMarquee = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <div className="md:max-w-7xl max-w-96 mx-auto pt-10 md:pt-26 overflow-hidden">
+    <div className="md:max-w-7xl max-w-96 mx-auto pt-12 md:pt-26 overflow-hidden">
       <div class="flex items-center justify-center mb-5 gap-8 md:mb-12 px-4">
         <hr class="flex-1 hidden md:inline w-32 border-t border-gray-300" />
         <p class="  mx-auto text-secondary-text text-center md:whitespace-nowrap">
