@@ -22,7 +22,7 @@ const About_Section = () => {
       id: 2,
       name: "Innovation",
       bgColor: "bg-blue-soft",
-      textColor: "text-secondary",
+      textColor: "text-blue-500",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path

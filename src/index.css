@@ -14,27 +14,20 @@
   --color-border: #e5e7eb; /* Light Gray */
 
 
-  --color-purple-primary: #7c3aed; /* Violet */
-  --color-purple-soft: #ede9fe; /* Light Violet */
-  --color-orange-primary: #ea580c; /* Orange Red */
-  --color-orange-soft: #fed7aa; /* Peach Puff */
-  --color-blue-soft: #dbeafe; /* Light Blue */
-  --color-rose-primary: #e11d48; /* Crimson */
-  --color-green-primary: #059669; /* Emerald */
-
-
+  --color-purple-primary: #7c3aed;
+  --color-purple-soft: #ede9fe;
+  --color-orange-primary: #ea580c;
+  --color-orange-soft: #fed7aa;
+  --color-blue-soft: #dbeafe;
+  --color-rose-primary: #e11d48;
+  --color-green-primary: #059669;
+  
   --color-purple-gradient: linear-gradient(135deg, #f5f3ff, #eae4ff);
-
   --color-rose-gradient: linear-gradient(135deg, #fdf2f8, #fce7ef);
-
   --color-blue-gradient: linear-gradient(135deg, #eff6ff, #dbeafe);
-
   --color-orange-gradient: linear-gradient(135deg, #fff7ed, #ffe8cc);
-
   --color-green-gradient: linear-gradient(135deg, #ecfdf5, #d1fae5);
-
-  --color-primary-gradient: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-}
+  --color-primary-gradient: linear-gradient(135deg, #f3f4f6, #e5e7eb);}
 
 .bg-purple-gradient {
   background: var(--color-purple-gradient);

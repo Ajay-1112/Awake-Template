@@ -15,7 +15,7 @@ const Service_Section = () => {
       icon: Palette,
       bgColor: "bg-purple-gradient",
       hoverColor: "hover:bg-purple-primary",
-      iconColor: "text-purple-primary",
+      
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const Service_Section = () => {
       icon: Package,
       bgColor: "bg-rose-gradient",
       hoverColor: "hover:bg-rose-primary",
-      iconColor: "text-rose-primary",
+
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const Service_Section = () => {
       icon: Smile,
       bgColor: "bg-blue-gradient",
       hoverColor: "hover:bg-secondary",
-      iconColor: "text-secondary",
+     
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const Service_Section = () => {
       icon: Wrench,
       bgColor: "bg-orange-gradient",
       hoverColor: "hover:bg-orange-primary",
-      iconColor: "text-orange-primary",
+
     },
     {
       id: 5,
@@ -63,7 +63,7 @@ const Service_Section = () => {
       icon: BarChart3,
       bgColor: "bg-green-gradient",
       hoverColor: "hover:bg-green-primary",
-      iconColor: "text-green-primary",
+  
     },
   ];
 
@@ -79,7 +79,7 @@ const Service_Section = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="grid px-3 md:px-3 grid-cols-2 md:flex md:flex-wrap   justify-center gap-3 md:gap-4 mb-16 max-w-7xl mx-auto">
+      <div className="grid px-3 md:px-3 grid-cols-2 md:flex md:flex-wrap justify-center gap-3 md:gap-4 mb-16 max-w-7xl mx-auto">
         {services.map((service) => {
           const IconComponent = service.icon;
           return (
@@ -88,11 +88,10 @@ const Service_Section = () => {
               className={`
                                 ${service.bgColor} ${service.hoverColor}
                               rounded-2xl p-8 transition-all duration-300 cursor-pointer
-                              transform hover:scale-105 hover:shadow-xl
                               w-full sm:w-48 md:w-52 lg:w-56
                               ${
                                 hoveredCard === service.id
-                                  ? "shadow-2xl"
+                                  ? "shadow-lg"
                                   : "shadow-lg"
                               }
                             `}
@@ -104,11 +103,9 @@ const Service_Section = () => {
                   size={36}
                   className={`${
                     service.iconColor
-                  } mb-4 transition-transform duration-300 ${
-                    hoveredCard === service.id ? "scale-110" : ""
-                  }`}
+                  } mb-4 transition-transform duration-300`}
                 />
-                <h3 className="text-primary-text  font-semibold text-xl leading-tight">
+                <h3 className="text-primary-text text-xl leading-tight">
                   {service.title}
                 </h3>
               </div>
