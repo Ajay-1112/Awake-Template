@@ -26,9 +26,9 @@ const Team_Section = () => {
     <section className="md:pt-10">
       <div className="max-w-screen-xl mx-auto px-3 md:px-8">
         <div className="max-w-2xl mx-auto text-center">
-          <h3 className="text-dark-text text-4xl font-semibold  md:text-5xl">
+          <h3 className="text-primary-text text-4xl font-semibold  md:text-5xl">
             Meet the creative minds <span className="hidden md:inline"><br /></span>{""}
-            behind <span className="italic  text-light-text font-instrument-serif">our success</span>
+            behind <span className="italic  text-secondary-text font-medium font-instrument-serif">our success</span>
           </h3>
         </div>
         <div className="mt-12">
@@ -43,10 +43,10 @@ const Team_Section = () => {
                   />
                 </div>
                 <div className="mt-4">
-                  <h4 className="text-lg text-dark-text font-semibold">
+                  <h4 className="text-lg text-primary-text font-semibold">
                     {item.name}
                   </h4>
-                  <p className=" text-light-text">{item.title}</p>
+                  <p className=" text-secondary-text">{item.title}</p>
                 </div>
               </li>
             ))}

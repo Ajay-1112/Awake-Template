@@ -56,7 +56,7 @@ export default function AwakeFooter() {
               </div>
               <h2 className="text-xl font-bold">{footerData.company.name}</h2>
             </div>
-            <p className="text-light-text text-md leading-relaxed">
+            <p className="text-secondary-text text-md leading-relaxed">
               {footerData.company.description}
             </p>
             
@@ -68,7 +68,7 @@ export default function AwakeFooter() {
                   <a 
                     key={social.name}
                     href={social.href} 
-                    className="text-light-text hover:text-dark-text transition-colors"
+                    className="text-secondary-text hover:text-primary-text transition-colors"
                     aria-label={social.name}
                   >
                     <IconComponent size={20} />
@@ -81,13 +81,13 @@ export default function AwakeFooter() {
           {/* Navigation Sections */}
           {footerData.navigation.map((section) => (
             <div key={section.title}>
-              <h3 className="text-dark-text font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-primary-text font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <a 
                       href={link.href} 
-                      className="text-light-text hover:text-dark-text transition-colors text-sm"
+                      className="text-secondary-text hover:text-primary-text transition-colors text-sm"
                     >
                       {link.name}
                     </a>
@@ -99,19 +99,19 @@ export default function AwakeFooter() {
 
           {/* Contact Details */}
           <div>
-            <h3 className="text-dark-text font-semibold mb-4">{footerData.contact.title}</h3>
+            <h3 className="text-primary-text font-semibold mb-4">{footerData.contact.title}</h3>
             <div className="space-y-3">
               {footerData.contact.details.map((detail, index) => (
                 <div key={index}>
                   {detail.href ? (
                     <a 
                       href={detail.href} 
-                      className="text-light-text hover:text-dark-text transition-colors text-sm block"
+                      className="text-secondary-text hover:text-primary-text transition-colors text-sm block"
                     >
                       {detail.content}
                     </a>
                   ) : (
-                    <p className="text-light-text hover:text-dark-text text-sm">
+                    <p className="text-secondary-text hover:text-primary-text text-sm">
                       {detail.content}
                     </p>
                   )}

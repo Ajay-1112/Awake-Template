@@ -46,13 +46,13 @@ const Testimonial_Section = () => {
   ];
   return (
     <div className="max-w-7xl mx-auto md:px-6 px-3 md:pt-16">
-      <h2 className="text-center text-dark-text text-4xl md:text-5xl font-semibold mb-12">
+      <h2 className="text-center text-primary-text text-4xl md:text-5xl font-semibold mb-12">
         What our satisfied customers{" "}
         <span className="hidden md:inline">
           <br />
         </span>
         are saying{" "}
-        <span className="font-instrument-serif italic text-light-text">
+        <span className="font-instrument-serif italic font-medium text-secondary-text">
           about us
         </span>
       </h2>
@@ -68,7 +68,7 @@ const Testimonial_Section = () => {
           }}
         >
           <div className="z-10">
-            <div className="text-sm text-light-text absolute top-10 mb-4">
+            <div className="text-sm text-secondary-text absolute top-10 mb-4">
               {data.testimonial.sectionTitle}
             </div>
             <blockquote className="text-xl md:text-2xl font-medium leading-snug mb-6">
@@ -90,17 +90,17 @@ const Testimonial_Section = () => {
           className="relative lg:w-[30%] min-h-[350px] 
         bg-yellow-200 rounded-2xl p-8 flex flex-col justify-start"
         >
-          <p className="text-sm text-light-text mb-8">
+          <p className="text-sm text-secondary-text mb-8">
             {data.statistics.sectionTitle}
           </p>
 
           {/* Stats */}
           {data.statistics.stats.map((stat, index) => (
             <div key={index} className="text-left absolute bottom-8 ">
-              <div className="text-6xl font-bold text-dark-text mb-4">
+              <div className="text-6xl font-bold text-primary-text mb-4">
                 {stat.value}
               </div>
-              <div className="text-lg font-medium text-dark-text leading-snug">
+              <div className="text-lg font-medium text-primary-text leading-snug">
                 “{stat.description}”
               </div>
             </div>
@@ -119,7 +119,7 @@ const Testimonial_Section = () => {
             {story.type === "featured" ? (
               <div className="bg-gray-900 text-white1 rounded-2xl p-8 h-full">
                 <div className="mb-6">
-                  <p className="text-light-text text-sm mb-4">
+                  <p className="text-secondary-text text-sm mb-4">
                     Customer stories
                   </p>
                   <h2 className="text-xl font-semibold text-left leading-tight">
@@ -138,19 +138,19 @@ const Testimonial_Section = () => {
             ) : (
               <div className="bg-white1 rounded-2xl p-8 h-full shadow-sm flex flex-col">
                 <div className="mb-8">
-                  <p className="text-light-text text-sm mb-6">
+                  <p className="text-secondary-text text-sm mb-6">
                     Customer stories
                   </p>
-                  <blockquote className="text-xl font-semibold text-dark-text leading-relaxed">
+                  <blockquote className="text-xl font-semibold text-primary-text leading-relaxed">
                     "{story.quote}"
                   </blockquote>
                 </div>
 
                 <div className="mt-auto">
-                  <p className="font-semibold text-dark-text mb-1">
+                  <p className="font-semibold text-primary-text mb-1">
                     {story.author}
                   </p>
-                  <p className="text-light-text text-sm">{story.position}</p>
+                  <p className="text-secondary-text text-sm">{story.position}</p>
                 </div>
               </div>
             )}

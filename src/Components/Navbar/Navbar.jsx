@@ -87,9 +87,9 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed max-w-7xl mx-auto top-6 md:top-3 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+        className={`fixed max-w-7xl mx-5 md:mx-auto top-6 md:top-3 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
           isScrolled
-            ? " bg-white1/90 rounded-3xl md:backdrop-blur-lg md:shadow-lg md:border md:border-gray-200/50 md:rounded-full"
+            ? " bg-white1/90  rounded-3xl md:backdrop-blur-lg md:shadow-lg md:border md:border-gray-200/50 md:rounded-full"
             : "bg-transparent"
         } px-4 sm:px-6 py-3 md:py-4 lg:px-8`}
       >
@@ -115,7 +115,7 @@ const Navbar = () => {
                   }}
                   className={`relative cursor-pointer px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ease-out ${
                     activeSection === item.id
-                      ? "bg-white shadow-lg text-light-text"
+                      ? "bg-white shadow-lg text-secondary-text"
                       : "text-primary hover:text-gray-900 hover:bg-white/70 "
                   }`}
                   style={{
@@ -134,7 +134,7 @@ const Navbar = () => {
           <Button
             text="Let's Collaborate"
             link="/learn-more"
-            className="hidden md:flex"
+            className="hidden md:flex text-white bg-black"
 
           />
 
@@ -170,11 +170,11 @@ const Navbar = () => {
           ref={mobileMenuRef}
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             isMobileMenuOpen
-              ? "max-h-96 opacity-100 mt-4"
+              ? " opacity-100 mt-4"
               : "max-h-0 opacity-0 mt-0"
           }`}
         >
-          <div className="bg-white/95 backdrop-blur-lg rounded-2xl p-4 mx-2 border border-gray-200/50 shadow-xl">
+          <div className="bg-white/95  backdrop-blur-lg rounded-2xl p-4 mx-2">
             <div className="space-y-1">
               {navItems.map((item, index) => (
                 <a
@@ -184,9 +184,9 @@ const Navbar = () => {
                     e.preventDefault();
                     handleNavClick(item.id);
                   }}
-                  className={`block text-light-text hover:text-dark-text transition-all duration-200 px-4 py-3 rounded-xl font-medium ${
+                  className={`block text-secondary-text hover:text-primary-text transition-all duration-200 px-4 py-3 rounded-xl font-medium ${
                     activeSection === item.id
-                      ? "bg-white shadow-md text-light-text"
+                      ? "bg-white shadow-md text-secondary-text"
                       : "hover:bg-gray-50 hover:pl-6"
                   }`}
                   style={{

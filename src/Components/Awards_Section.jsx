@@ -37,9 +37,9 @@ const AwardsSection = () => {
       {/* Header */}
       <div>
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-[var(--color-dark-text)] mb-4">
+          <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-[var(--color-primary-text)] mb-4">
           Accolades and achievements <br/>celebration our{" "}
-            <span className="italic text-light-text font-instrument-serif">
+            <span className="italic text-secondary-text font-medium font-instrument-serif">
               design excellence
             </span>
           </h2>
@@ -59,15 +59,15 @@ const AwardsSection = () => {
 
               {/* Content */}
               <div className="space-y-4">
-                <p className="text-[var(--color-light-text)] text-sm font-medium uppercase tracking-wider">
+                <p className="text-[var(--color-secondary-text)] text-sm font-medium uppercase tracking-wider">
                   {award.organization}
                 </p>
 
-                <h3 className="text-[var(--color-dark-text)] text-lg font-semibold leading-snug">
+                <h3 className="text-[var(--color-primary-text)] text-lg font-semibold leading-snug">
                   {award.title}
                 </h3>
 
-                <p className="text-[var(--color-light-text)] text-base font-medium">
+                <p className="text-[var(--color-secondary-text)] text-base font-medium">
                   {award.year}
                 </p>
               </div>
@@ -76,16 +76,16 @@ const AwardsSection = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-3 md:mx-auto mt-16 py-20 md:py-32 md:px-0 px-3 border  border-border bg-white1 rounded-2xl mb-10 text-center">
-        <h2 className=" max-w-5xl mx-auto text-5xl font-semibold text-dark-text text-center">
+        <h2 className=" max-w-5xl mx-auto text-5xl font-semibold text-primary-text text-center">
           Innovative solutions for{" "}
-          <span className="font-instrument-serif text-light-text italic">bold brands</span>
+          <span className="font-instrument-serif font-medium text-secondary-text italic">bold brands</span>
         </h2>
-        <p className="text-lg text-light-text mt-4 mb-12 max-w-6xl mx-auto">
+        <p className="text-lg text-secondary-text mt-4 mb-12 max-w-6xl mx-auto">
           Looking to elevate your brand? We craft immersive experiences that
           captivate, engage, and make your business unforgettable in every
           interaction.
         </p>
-        <Button text="Get in touch" href="/contact" />
+        <Button text="Let's Craft Together" href="/contact" className="bg-black text-white " />
       </div>
     </div>
   );

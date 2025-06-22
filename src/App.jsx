@@ -41,20 +41,27 @@ const fadeUp = {
 
 const App = () => {
   return (
-    <div className="w-full  bg-[linear-gradient(135deg,#ffffff_0%,#dbeadf_50%,#588157_150%)] font-inter">
+    <div className="w-full font-inter">
       <Navbar />
 
       {/* Hero Section */}
       <motion.section
         id="home"
-        className="bg-[linear-gradient(135deg,#ffffff_0%,#dbeadf_50%,#588157_100%)] min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 py-16 md:pt-4 md:pb-24 lg:pt-32 lg:pb-24"
+        className=" min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-32 md:pt-4 md:pb-0 lg:pt-32 "
+        style={{
+          background: `
+            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2), transparent 45%),
+            radial-gradient(circle at 50% 70%, rgba(255, 255, 255, 0.15), transparent 50%),
+            linear-gradient(180deg, #eaf6fc 0%, #f3fafd 50%, #ffffff 100%)`,
+        }}
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
         <motion.h1
-          className="text-[55px] md:text-7xl lg:text-9xl font-semibold text-dark-text mb-6 leading-tight max-w-7xl"
+          className="text-[55px] md:text-7xl lg:text-9xl font-semibold text-primary-text mb-6 leading-tight max-w-7xl"
           variants={fadeUp}
         >
           Building bold brands {""}
@@ -62,13 +69,13 @@ const App = () => {
             <br />
           </span>
           with{" "}
-          <span className="text-light-text font-instrument-serif italic">
+          <span className="text-secondary-text font-medium font-instrument-serif italic">
             thoughtful design
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-base md:text-lg lg:text-xl text-light-text  mb-8 max-w-3xl"
+          className="text-base md:text-lg lg:text-xl text-secondary-text  mb-8 max-w-3xl"
           variants={fadeUp}
         >
           At Awake, we help small startups tackle the world's biggest challenges
@@ -79,7 +86,11 @@ const App = () => {
           className="text-center md:flex gap-5 items-center"
           variants={fadeUp}
         >
-          <Button text="Get Started" link="#Services" />
+          <Button
+            text="Get Started"
+            link="#Services"
+            className="bg-blue-600  w-40 text-white1"
+          />
           <div className="md:flex gap-5 mt-6 md:mt-0 justify-center items-center space-y-3 ">
             <div className="flex mt-2 items-center justify-center">
               <img
@@ -114,14 +125,14 @@ const App = () => {
               </div>
 
               {/* Trust Text */}
-              <p className="text-light-text text-sm font-medium">
+              <p className="text-secondary-text text-sm font-medium">
                 Trusted by 1000+ clients
               </p>
             </div>
           </div>
         </motion.div>
-      </motion.section>
       <LogoMarquee />
+      </motion.section>
 
       {/* Reuse the same animation for all sections */}
       {[

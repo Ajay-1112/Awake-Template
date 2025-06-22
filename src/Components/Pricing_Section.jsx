@@ -12,8 +12,8 @@ const Pricing_Section = () => {
         "For companies who need design support. One request at a time",
       color: {
         background: "bg-yellow-200",
-        text: "text-[var(--color-dark-text)]",
-        divider: "bg-[var(--color-dark-text)]/20",
+        text: "text-[var(--color-primary-text)]",
+        divider: "bg-[var(--color-primary-text)]/20",
       },
       features: [
         "Design Updates Every 2 Days",
@@ -32,7 +32,7 @@ const Pricing_Section = () => {
       description:
         "2x the speed. Great for an MVP, Web App or complex problem",
       color: {
-        background: "bg-[var(--color-secondary)]",
+        background: "bg-blue-500",
         text: "text-white1",
         divider: "bg-white1/20",
       },
@@ -49,7 +49,7 @@ const Pricing_Section = () => {
 
   return (
     <>
-    <h2 className="md:text-5xl md:pt-10 text-4xl font-semibold text-dark-text text-center md:mb-8">Pick the plan that <br/> fits your <span className="font-instrument-serif italic text-light-text">start-up</span></h2>
+    <h2 className="md:text-5xl md:pt-10 text-4xl font-semibold text-primary-text text-center md:mb-8">Pick the plan that <br/> fits your <span className="font-instrument-serif font-medium italic text-secondary-text">start-up</span></h2>
     <div className="flex items-center justify-center py-6 ">
       <div className="max-w-7xl px-3 lg:h-82 w-full flex flex-col lg:flex-row gap-8">
         {plans.map((plan) => (
@@ -60,7 +60,7 @@ const Pricing_Section = () => {
             {/* Left */}
             <div className="flex flex-col justify-between md:w-1/2 pr-6">
               <div>
-                <span className="text-sm font-semibold px-4 py-1 bg-[var(--color-primary)] text-white rounded-full inline-block mb-4">
+                <span className="text-sm font-semibold px-4 py-1 bg-[var(--color-primary)] text-white1 rounded-full inline-block mb-4">
                   {plan.label}
                 </span>
                 <p className="text-sm mb-6">{plan.description}</p>
@@ -69,7 +69,7 @@ const Pricing_Section = () => {
                   <span className="text-base font-medium">{plan.note}</span>
                 </h2>
               </div>
-              <Button />
+              <Button className="bg-black text-white  " />
             </div>
 
             {/* Divider */}

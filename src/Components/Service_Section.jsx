@@ -70,16 +70,16 @@ const Service_Section = () => {
   return (
     <section id="service">
       <div className="text-center md:mt-10 ">
-        <h1 className="text-4xl md:text-5xl  text-dark-text  font-semibold mb-4">
+        <h1 className="text-4xl md:text-5xl  text-primary-text  font-semibold mb-4">
           Where innovation <br /> meets {""}
-          <span className="italic font-instrument-serif text-light-text ">
+          <span className="italic font-instrument-serif font-medium text-secondary-text ">
             aesthetics
           </span>
         </h1>
       </div>
 
       {/* Services Grid */}
-      <div className="flex px-3 md:px-3  flex-wrap justify-center gap-3 md:gap-4 mb-16 max-w-7xl mx-auto">
+      <div className="grid px-3 md:px-3 grid-cols-2 md:flex md:flex-wrap   justify-center gap-3 md:gap-4 mb-16 max-w-7xl mx-auto">
         {services.map((service) => {
           const IconComponent = service.icon;
           return (
@@ -108,7 +108,7 @@ const Service_Section = () => {
                     hoveredCard === service.id ? "scale-110" : ""
                   }`}
                 />
-                <h3 className="text-dark-text  font-semibold text-xl leading-tight">
+                <h3 className="text-primary-text  font-semibold text-xl leading-tight">
                   {service.title}
                 </h3>
               </div>
@@ -130,8 +130,8 @@ const Service_Section = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button text="Get Started" link="/get-started" />
-            <Button text="View Portfolio" link="/portfolio" />
+            <Button text="Get Started" link="/get-started" className="bg-gray-100 text-black w-44" />
+            <Button text="View Portfolio" link="/portfolio" className="bg-black text-white w-44 border " />
           </div>
         </div>
       </div>

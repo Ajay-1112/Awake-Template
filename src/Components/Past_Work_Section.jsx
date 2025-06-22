@@ -32,13 +32,13 @@ const Past_Work_Section = () => {
   return (
     <section className="max-w-7xl mx-auto px-3 md:px-6 md:py-10">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-dark-text  mb-4">
+        <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-primary-text  mb-4">
           How we transformed a small{" "}
           <span className="hidden md:inline">
             <br />
           </span>{" "}
           business’s{" "}
-          <span className="italic text-light-text  font-instrument-serif">
+          <span className="italic text-secondary-text font-medium  font-instrument-serif">
             online presence
           </span>
         </h2>
@@ -66,14 +66,14 @@ const Past_Work_Section = () => {
 
             {/* Text content */}
             <div className="p-4 relative z-20 bg-white ">
-              <h3 className="text-xl font-bold mt-2 text-dark-text ">
+              <h3 className="text-xl font-bold mt-2 text-primary-text ">
                 {card.title}
               </h3>
               <div className="flex flex-wrap items-center gap-3 mt-2 text-primary-light text-md font-semibold">
                 {card.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="border border-border rounded-full px-3 text-light-text  py-1 text-sm "
+                    className="border border-border rounded-full px-3 text-secondary-text  py-1 text-sm "
                   >
                     {tag}
                   </span>

@@ -1,26 +1,23 @@
-import React from 'react';
+import React from "react";
 
-const Button = ({ text = "Let's Collaborate", link = '#', className = '' }) => {
+const Button = ({ text = "Let's Collaborate", link = "#", className = "" }) => {
   return (
     <div className="inline-block">
       <a href={link}>
         <button
           className={`
-            flex justify-between gap-3 group relative overflow-hidden 
-            bg-gradient-to-r 
-            px-4 py-2.5 rounded-full bg-primary
-            hover:bg-primary-light
+            flex justify-around gap-3  relative overflow-hidden  
+             p-3 rounded-full  group
             transition-all duration-300 
-            border border-border
-            items-center space-x-2 
+            items-center  
             shadow-lg hover:shadow-xl hover:scale-105
             ${className}
           `}
         >
-          <span className="relative z-10 text-white1 font-medium">{text}</span>
-          <div className="w-5 h-5 bg-white1 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
+          <span className="relative z-10  font-medium">{text}</span>
+          <div className="w-7 h-7 bg-white1 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
             <svg
-              className="w-3 h-3 text-gray-900"
+              className="w-4 h-4 text-gray-900"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
