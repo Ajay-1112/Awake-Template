@@ -20,25 +20,24 @@ const container = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
       duration: 0.6,
-      ease: [0.25, 0.8, 0.25, 1],
+      ease: [0.33, 1, 0.68, 1],
     },
   },
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
-      ease: [0.25, 0.8, 0.25, 1],
+      duration: 1.0,
+      ease: [0.33, 1, 0.68, 1],
     },
   },
 };
-
 const App = () => {
   return (
     <div className="w-full font-inter">
@@ -131,7 +130,9 @@ const App = () => {
             </div>
           </div>
         </motion.div>
-      <LogoMarquee />
+        <motion.div variants={fadeUp}>
+          <LogoMarquee />
+        </motion.div>
       </motion.section>
 
       {/* Reuse the same animation for all sections */}
