@@ -88,7 +88,7 @@ const About_Section = () => {
   }, [hasAnimated]);
 
   return (
-    <section id="about" className="max-w-7xl mx-auto px-6 py-2 md:pt-10">
+    <section id="about" className="max-w-7xl mx-auto px-6  md:pt-10">
       {/* Skills Header */}
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-3xl lg:text-5xl font-semibold text-primary-text mb-8">

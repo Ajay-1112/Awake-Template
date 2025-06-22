@@ -47,7 +47,7 @@ const App = () => {
       {/* Hero Section */}
       <motion.section
         id="home"
-        className=" min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-32 md:pt-4 md:pb-0 lg:pt-32 "
+        className=" min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-20 md:pt-4 md:pb-0 lg:pt-32 "
         style={{
           background: `
             radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
@@ -150,7 +150,7 @@ const App = () => {
         <motion.section
           key={id}
           id={id}
-          className="pt-20"
+          className="  pt-10 md:pt-20"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
