@@ -186,8 +186,8 @@ const Navbar = () => {
                   }}
                   className={`block text-secondary-text hover:text-primary-text transition-all duration-200 px-4 py-3 rounded-xl font-medium ${
                     activeSection === item.id
-                      ? "bg-white shadow-md text-secondary-text"
-                      : "hover:bg-gray-50 hover:pl-6"
+                      ? "bg-white shadow-2xl text-secondary-text"
+                      : "hover:bg-gray-50  hover:pl-6"
                   }`}
                   style={{
                     animationDelay: `${index * 50}ms`,
