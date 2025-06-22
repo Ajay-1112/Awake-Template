@@ -63,7 +63,7 @@ const LogoMarquee = () => {
         <p class="  mx-auto text-secondary-text text-center md:whitespace-nowrap">
           Loved by 1000+ big and small brands around the world
         </p>
-        <hr class="flex-1 hidden lg:inline  max-w-90 border-t border-gray-300" />
+        <hr class="flex-1 hidden lg:inline max-w-90 border-t border-gray-300" />
       </div>
 
       <div className="relative">
