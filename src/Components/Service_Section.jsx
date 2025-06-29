@@ -49,8 +49,8 @@ const Service_Section = () => {
   ];
 
   return (
-    <section id="service">
-      <div className="text-center md:mt-10 ">
+    <section id="service" className="bg-[#D7CCB6] py-10">
+      <div className="text-center md:py-10 ">
         <h1 className="text-4xl md:text-5xl  text-primary-text  font-semibold mb-4">
           Take Clear  <br /> Actionable  {""}
           <span className="italic font-instrument-serif font-medium text-secondary-text ">

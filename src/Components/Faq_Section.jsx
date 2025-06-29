@@ -1,3 +1,4 @@
+import { div } from "framer-motion/m";
 import { useRef, useState } from "react";
 
 const FaqsCard = (props) => {
@@ -19,8 +20,7 @@ const FaqsCard = (props) => {
       onClick={handleOpenAnswer}
     >
       <h4
-        className="pb-5 flex items-center justify-between text-lg font-medium"
-        style={{ color: "var(--color-primary-text)" }}
+        className="pb-5 flex items-center text-[#2F3119] justify-between text-lg font-medium"
       >
         {faqsList.q}
         {state ? (
@@ -53,7 +53,7 @@ const FaqsCard = (props) => {
         style={state ? { height: answerH } : { height: "0px" }}
       >
         <div>
-          <p className="pb-5" style={{ color: "var(--color-secondary-text)" }}>
+          <p className="pb-5 text-[#828967]" >
             {faqsList.a}
           </p>
         </div>
@@ -108,7 +108,8 @@ const FaqSection = () => {
 
 
   return (
-    <section className="leading-relaxed max-w-screen-xl md:mt-12 mx-auto px-5 md:px-8  rounded-4xl md:p-8" id="Faq">
+    <div className="bg-[#F2EEE3]">
+    <section className="leading-relaxed max-w-screen-xl md:pt-12 mx-auto px-5 md:px-8  rounded-4xl md:p-8" id="Faq">
       <div className="space-y-3 text-center">
         <h1 className="md:text-5xl text-4xl font-semibold" style={{ color: "var(--color-primary-text)" }}>
           Got questions? <br /> We’ve got  <span className="font-instrument-serif font-medium text-secondary-text italic">answers</span>
@@ -120,6 +121,7 @@ const FaqSection = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

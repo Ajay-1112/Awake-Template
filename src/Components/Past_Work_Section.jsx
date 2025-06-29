@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import { div } from "framer-motion/client";
 
 const Past_Work_Section = () => {
   const cardData = [
@@ -30,15 +31,16 @@ const Past_Work_Section = () => {
   ];
 
   return (
+    <div className="bg-[#2F3119]">
     <section className="max-w-7xl mx-auto px-3 md:px-6 md:py-10">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-primary-text  mb-4">
+        <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-[#D7CCB6]  mb-4">
           How we transformed a small{" "}
           <span className="hidden md:inline">
             <br />
           </span>{" "}
           business’s{" "}
-          <span className="italic text-secondary-text font-medium  font-instrument-serif">
+          <span className="italic text-[#D7CCB6] font-medium  font-instrument-serif">
             online presence
           </span>
         </h2>
@@ -58,7 +60,7 @@ const Past_Work_Section = () => {
             />
 
             {/* Hover overlay */}
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex justify-end items-start p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+            <div className="absolute inset-0 backdrop-blur-sm flex justify-end items-start p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" style={{ backgroundColor: "rgba(215,204,182, 0.3)" }}>
               <div className="text-white bg-black/60 rounded-full p-2">
                 <ArrowUpRight className="w-5 h-5" />
               </div>
@@ -73,7 +75,7 @@ const Past_Work_Section = () => {
                 {card.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="border border-border rounded-full px-3 text-secondary-text  py-1 text-sm "
+                    className="border border-border rounded-full px-3 text-[#8E4C32]  py-1 text-sm "
                   >
                     {tag}
                   </span>
@@ -84,6 +86,7 @@ const Past_Work_Section = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

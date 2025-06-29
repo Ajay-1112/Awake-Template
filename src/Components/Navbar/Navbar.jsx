@@ -104,7 +104,7 @@ const Navbar = () => {
     <>
       <header
         className={`fixed max-w-7xl mx-5 md:mx-auto top-6 md:top-3 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled
-          ? " bg-white1/90 rounded-3xl md:backdrop-blur-lg md:shadow-lg md:border md:border-gray-200/50 md:rounded-full"
+          ? " bg-[#828967] rounded-3xl md:backdrop-blur-lg md:shadow-lg md:border md:border-gray-200/50 md:rounded-full"
           : "bg-transparent"
           } px-4 sm:px-6 py-3 md:py-4 lg:px-8 h-24 `}
       >
@@ -124,7 +124,7 @@ const Navbar = () => {
                     handleNavClick(item.id);
                   }}
                   className={`relative cursor-pointer px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ease-out ${activeSection === item.id
-                    ? "bg-white shadow-lg text-secondary-text"
+                    ? "bg-[#828967] shadow-lg text-secondary-text"
                     : "text-primary hover:text-gray-900 hover:bg-white/70"
                     }`}
                   style={{ animationDelay: `${index * 50}ms` }}
@@ -142,7 +142,8 @@ const Navbar = () => {
           <Button
             text="Let's Collaborate"
             link="/learn-more"
-            className="hidden md:flex text-white bg-black"
+            className="bg-[#8E4C32] hover:bg-[#BA8C3E] hidden md:flex  text-white1"
+
           />
 
           {/* Mobile Hamburger */}

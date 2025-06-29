@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import React from "react";
 
 const LogoMarquee = () => {
@@ -57,6 +58,7 @@ const LogoMarquee = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
+    <div className="bg-[#F8F6F2]">
     <div className="lg:max-w-7xl max-w-96 mx-auto pt-12 md:pt-26 overflow-hidden">
       <div class="flex items-center justify-center mb-5 gap-8 md:mb-12 px-4">
         <hr class="flex-1 hidden lg:inline max-w-90 border-t border-gray-300" />
@@ -94,6 +96,7 @@ const LogoMarquee = () => {
             ))}
           </div>
         </div>
+      </div>
       </div>
 
       <style jsx>{`

@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import React, { useEffect, useState, useRef } from "react";
 import CountUp from "react-countup";
 
@@ -88,7 +89,8 @@ const About_Section = () => {
   }, [hasAnimated]);
 
   return (
-    <section id="about" className="max-w-7xl mx-auto px-6  md:pt-10">
+    <div id="about" className="bg-[#F8F6F2]">    
+    <section  className="max-w-7xl mx-auto px-6  md:pt-10 ">
       {/* Skills Header */}
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-3xl lg:text-5xl font-semibold text-primary-text md:px-10 mb-12">
@@ -149,6 +151,7 @@ const About_Section = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

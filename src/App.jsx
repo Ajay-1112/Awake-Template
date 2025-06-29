@@ -45,34 +45,34 @@ const App = () => {
       {/* Hero Section */}
       <motion.section
         id="home"
-        className=" min-h-screen bg-[#454A2A] rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-28  md:pb-0 lg:pt-36 "
-        style={{
-          background: `
-            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
-            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2), transparent 45%),
-            radial-gradient(circle at 50% 70%, rgba(255, 255, 255, 0.15), transparent 50%),
-            linear-gradient(180deg, #eaf6fc 0%, #f3fafd 50%, #ffffff 100%)`,
-        }}
+        className=" min-h-screen bg-[#828967] rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-28  md:pb-8 lg:pt-36 "
+        // style={{
+        //   background: `
+        //     radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
+        //     radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2), transparent 45%),
+        //     radial-gradient(circle at 50% 70%, rgba(255, 255, 255, 0.15), transparent 50%),
+        //     linear-gradient(180deg, #eaf6fc 0%, #f3fafd 50%, #ffffff 100%)`,
+        // }}
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
         <motion.h1
-          className="text-[55px] md:text-6xl lg:text-8xl font-semibold text-primary-text mb-6 leading-tight max-w-7xl"
+          className="text-[55px] md:text-6xl lg:text-8xl font-semibold text-[#D7CCB6] mb-6 leading-tight max-w-7xl"
           variants={fadeUp}
         >
-          Helping <span className="text-secondary-text font-medium font-instrument-serif italic">
+          Helping <span className=" font-medium font-instrument-serif italic">
             Business Owners {""}
           </span>
           Understand their Numbers to {""}
-          <span className="text-secondary-text font-medium font-instrument-serif italic">
+          <span className=" font-medium font-instrument-serif italic">
             Drive Results
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-base md:text-lg lg:text-xl text-secondary-text  mb-8 max-w-3xl"
+          className="text-base md:text-lg lg:text-xl text-[#E5DFD0]  mb-8 max-w-3xl"
           variants={fadeUp}
         >
           Our personalized and data-focused approach ensures you gain clarity and confidence without being overwhelmed by the details.   </motion.p>
@@ -83,7 +83,7 @@ const App = () => {
           <Button
             text="Get Started"
             link="#Services"
-            className="bg-blue-600  w-40 text-white1"
+            className="bg-[#8E4C32] hover:bg-[#BA8C3E]  w-40 text-white1"
           />
           <div className="md:flex gap-5 mt-6 md:mt-0 justify-center items-center space-y-3 ">
             <div className="flex mt-2 items-center justify-center">
@@ -119,15 +119,15 @@ const App = () => {
               </div>
 
               {/* Trust Text */}
-              <p className="text-secondary-text text-sm font-medium">
+              <p className="text-[#E5DFD0] text-sm font-medium">
                 Trusted by Hawaii’s local business community </p>
             </div>
           </div>
         </motion.div>
-        <motion.div variants={fadeUp}>
-          <LogoMarquee />
-        </motion.div>
       </motion.section>
+      <motion.div variants={fadeUp}>
+        <LogoMarquee />
+      </motion.div>
 
       {/* Reuse the same animation for all sections */}
       {[
@@ -139,14 +139,13 @@ const App = () => {
         { id: "Testimonial", Component: Testimonial_Section },
         { id: "Pricing", Component: Pricing_Section },
         { id: "Faq", Component: Faq_Section },
-        // { id: "AboutMe", Component: About_me },
 
         // eslint-disable-next-line no-unused-vars
       ].map(({ id, Component }) => (
         <motion.section
           key={id}
           id={id}
-          className="  pt-10 md:pt-20 scroll"
+          className=""
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

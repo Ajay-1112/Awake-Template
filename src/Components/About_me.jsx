@@ -1,8 +1,10 @@
+import { div } from 'framer-motion/client'
 import React from 'react'
 
 const About_me = () => {
     return (
-        <div id="About_me" className="relative bg-white overflow-hidden mt-16 max-w-7xl mx-auto rounded-3xl">
+        <div className='bg-[#D7CCB6] overflow-hidden'>      
+          <div id="About_me" className="relative bg-[#D7CCB6] overflow-hidden  my-16 max-w-7xl mx-auto rounded-3xl">
             <div className="">
                 <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                     <svg
@@ -38,6 +40,8 @@ const About_me = () => {
                 />
             </div>
         </div>
+        </div>
+
     );
 }
 

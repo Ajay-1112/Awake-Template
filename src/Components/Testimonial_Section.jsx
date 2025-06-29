@@ -44,7 +44,8 @@ const Testimonial_Section = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto md:px-6 px-3 md:pt-16">
+    <div className='bg-[#F8F6F2]'>
+    <div className="max-w-7xl mx-auto md:px-6 px-3 md:py-16">
       <h2 className="text-center text-primary-text text-4xl md:text-5xl font-semibold mb-12">
         Here’s what Hawaii businesses
         {" "}
@@ -156,6 +157,7 @@ const Testimonial_Section = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

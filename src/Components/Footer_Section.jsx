@@ -44,7 +44,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className=" text-primary  py-10 md:py-16 px-6">
+    <footer className=" text-primary bg-[#2F3119] py-10 md:py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo and Description */}
@@ -52,7 +52,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 h-20">
               <img src="/images/logo options -01.png" alt="" className="h-40 w-auto -ml-10 " />
             </div>
-            <p className="text-secondary-text text-md leading-relaxed">
+            <p className="text-[#D7CCB6] text-md leading-relaxed">
               {footerData.company.description}
             </p>
 
@@ -64,7 +64,7 @@ export default function Footer() {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="text-secondary-text hover:text-primary-text transition-colors"
+                    className="text-[#D7CCB6]  hover:text-[#8E4C32] transition-colors"
                     aria-label={social.name}
                   >
                     <IconComponent size={20} />
@@ -77,13 +77,13 @@ export default function Footer() {
           {/* Navigation Sections */}
           {footerData.navigation.map((section) => (
             <div key={section.title}>
-              <h3 className="text-primary-text font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-[#8E4C32] font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-secondary-text hover:text-primary-text transition-colors text-sm"
+                      className="text-[#D7CCB6]  hover:text-[#8E4C32] transition-colors text-sm"
                     >
                       {link.name}
                     </a>
@@ -95,19 +95,19 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h3 className="text-primary-text font-semibold mb-4">{footerData.contact.title}</h3>
+            <h3 className="text-[#8E4C32] font-semibold mb-4">{footerData.contact.title}</h3>
             <div className="space-y-3">
               {footerData.contact.details.map((detail, index) => (
                 <div key={index}>
                   {detail.href ? (
                     <a
                       href={detail.href}
-                      className="text-secondary-text hover:text-primary-text transition-colors text-sm block"
+                      className="text-[#D7CCB6]  hover:text-[#8E4C32] transition-colors text-sm block"
                     >
                       {detail.content}
                     </a>
                   ) : (
-                    <p className="text-secondary-text hover:text-primary-text text-sm">
+                    <p className="text-[#D7CCB6]  hover:text-[#8E4C32] text-sm">
                       {detail.content}
                     </p>
                   )}

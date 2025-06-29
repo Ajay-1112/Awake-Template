@@ -11,7 +11,7 @@ const Pricing_Section = () => {
       description:
         "For companies who need design support. One request at a time",
       color: {
-        background: "bg-yellow-200",
+        background: "bg-[#828967]",
         text: "text-[var(--color-primary-text)]",
         divider: "bg-[var(--color-primary-text)]/20",
       },
@@ -32,7 +32,7 @@ const Pricing_Section = () => {
       description:
         "2x the speed. Great for an MVP, Web App or complex problem",
       color: {
-        background: "bg-blue-500",
+        background: "bg-[#828967]",
         text: "text-white1",
         divider: "bg-white1/20",
       },
@@ -48,7 +48,7 @@ const Pricing_Section = () => {
   ];
 
   return (
-    <>
+    <div className="bg-[#D7CCB6] py-10">
       <h2 className="md:text-5xl md:pt-10 text-4xl font-semibold text-primary-text text-center md:mb-8">Pick the plan that <br /> fits your <span className="font-instrument-serif font-medium italic text-secondary-text">start-up</span></h2>
       <div className="flex items-center justify-center py-6 ">
         <div className="max-w-7xl px-3 lg:h-82 w-full flex flex-col lg:flex-row gap-8">
@@ -69,7 +69,7 @@ const Pricing_Section = () => {
                     <span className="text-base font-medium">{plan.note}</span>
                   </h2>
                 </div>
-                <Button className="bg-black text-white  " />
+                <Button className="bg-[#8E4C32] text-white  " />
               </div>
 
               {/* Divider */}
@@ -88,17 +88,17 @@ const Pricing_Section = () => {
           ))}
         </div>
       </div>
-      <div className="max-w-7xl mx-3 md:mx-auto mt-16 py-20 md:py-28 md:px-0 px-3 border  border-border bg-white1 rounded-2xl mb-10 text-center">
-        <h2 className=" max-w-5xl mx-auto text-5xl font-semibold text-primary-text text-center">
+      <div className="max-w-7xl mx-3 md:mx-auto mt-16 py-20 md:py-28 md:px-0 px-3 border  border-border bg-[#2F3119] rounded-2xl mb-10 text-center">
+        <h2 className=" max-w-5xl mx-auto text-5xl font-semibold text-[#D7CCB6] text-center">
           Ready to Harness the Power of {" "}
-          <span className="font-instrument-serif font-medium text-secondary-text italic">Your Data?</span>
+          <span className="font-instrument-serif font-medium text-[#D7CCB6] italic">Your Data?</span>
         </h2>
-        <p className="text-lg text-secondary-text mt-4 mb-12 max-w-6xl mx-auto">
+        <p className="text-lg text-[#D7CCB6] mt-4 mb-12 max-w-6xl mx-auto">
           You don’t need more data — you need a better plan.<br />
           Let’s create one that transforms insights into real-world results.        </p>
-        <Button text="Book a Discovery Call" href="/contact" className="bg-black text-white " />
+        <Button text="Book a Discovery Call" href="/contact" className="bg-[#8E4C32] text-white " />
       </div>
-    </>
+    </div>
   );
 };
 
