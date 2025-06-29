@@ -1,69 +1,50 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import { Palette, Package, Smile, Wrench, BarChart3 } from "lucide-react";
+import { Database, ClipboardList, Settings, AreaChart } from "lucide-react";
+
 const Service_Section = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const services = [
     {
       id: 1,
-      title: (
-        <>
-          Brand <br /> Strategy
-        </>
-      ),
-      icon: Palette,
-      bgColor: "bg-purple-gradient",
-      hoverColor: "hover:bg-purple-primary",
-      
+      title: <>Data Pipeline <span className="md:hidden inline">
+        <br />
+      </span> Development</>,
+      description: "Establishing systems to collect, organize, and manage data efficiently.",
+      icon: Database,
+      bgColor: "bg-rose-gradient",
+      hoverColor: "hover:bg-rose-primary",
     },
     {
       id: 2,
-      title: (
-        <>
-          Web <br /> Development
-        </>
-      ),
-      icon: Package,
-      bgColor: "bg-rose-gradient",
-      hoverColor: "hover:bg-rose-primary",
-
+      title: <>Technical Project <span className="md:hidden inline">
+        <br />
+      </span> Management</>,
+      description: "Supporting your system procurement and development project. Supporting your procurement and development projects with strategic oversight to achieve timely results.",
+      icon: ClipboardList,
+      bgColor: "bg-blue-gradient",
+      hoverColor: "hover:bg-secondary",
     },
     {
       id: 3,
-      title: (
-        <>
-          Digital <br /> Marketing
-        </>
-      ),
-      icon: Smile,
-      bgColor: "bg-blue-gradient",
-      hoverColor: "hover:bg-secondary",
-     
+      title: <>Business Process <span className="md:hidden inline">
+        <br />
+      </span> Optimization</>,
+      description: "Identifying bottlenecks, redundancies, and points for automation to save time and resources.",
+      icon: Settings,
+      bgColor: "bg-orange-gradient",
+      hoverColor: "hover:bg-orange-primary",
     },
     {
       id: 4,
-      title: (
-        <>
-          UI/UX <br /> Designing
-        </>
-      ),
-      icon: Wrench,
-      bgColor: "bg-orange-gradient",
-      hoverColor: "hover:bg-orange-primary",
-
-    },
-    {
-      id: 5,
-      title: (
-        <>
-          Analytics & <br /> Reporting
-        </>
-      ),
-      icon: BarChart3,
+      title: <>Data Analysis &<span className="md:hidden inline">
+        <br />
+      </span> Visualization</>,
+      description: "Identifying areas of underperformance and suggested target improvements.",
+      icon: AreaChart,
       bgColor: "bg-green-gradient",
       hoverColor: "hover:bg-green-primary",
-  
     },
   ];
 
@@ -71,43 +52,63 @@ const Service_Section = () => {
     <section id="service">
       <div className="text-center md:mt-10 ">
         <h1 className="text-4xl md:text-5xl  text-primary-text  font-semibold mb-4">
-          Where innovation <br /> meets {""}
+          Take Clear  <br /> Actionable  {""}
           <span className="italic font-instrument-serif font-medium text-secondary-text ">
-            aesthetics
+            Insights
           </span>
         </h1>
       </div>
 
+      <div className="text-center mt-10 mb-10">
+        <p className="text-sm md:text-lg text-secondary-text max-w-5xl mx-auto">
+          At Data Huaka'i, we provide personalized data analysis and consulting services to help small to mid-sized businesses in Hawaii make informed choices based on clear data to grow their business.
+        </p>
+      </div>
+
       {/* Services Grid */}
-      <div className="grid px-3 md:px-3 grid-cols-2 md:flex md:flex-wrap justify-center gap-3 md:gap-4 mb-16 max-w-7xl mx-auto">
+      <div className="flex flex-col px-3 md:px-0  md:flex-row justify-center gap-3 sm:gap-4 mb-16 max-w-7xl mx-auto">
         {services.map((service) => {
           const IconComponent = service.icon;
           return (
             <div
               key={service.id}
-              className={`
-                                ${service.bgColor} ${service.hoverColor}
-                              rounded-2xl p-8 transition-all duration-300 cursor-pointer
-                              w-full sm:w-48 md:w-52 lg:w-56
-                              ${
-                                hoveredCard === service.id
-                                  ? "shadow-lg"
-                                  : "shadow-lg"
-                              }
-                            `}
+              className="w-full sm:h-70 h-60  perspective-1000"
               onMouseEnter={() => setHoveredCard(service.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <div className="flex flex-col gap-2 ">
-                <IconComponent
-                  size={36}
-                  className={`${
-                    service.iconColor
-                  } mb-4 transition-transform duration-300`}
-                />
-                <h3 className="text-primary-text text-xl leading-tight">
-                  {service.title}
-                </h3>
+              <div className={`
+                relative w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer
+                ${hoveredCard === service.id ? 'rotate-y-180' : ''}
+              `}>
+                {/* Front of card */}
+                <div className={`
+                  absolute inset-0 w-full h-full backface-hidden
+                  ${service.bgColor} ${service.hoverColor}
+                  rounded-2xl p-8 shadow-lg
+                `}>
+                  <div className="flex flex-col gap-2 h-full justify-center">
+                    <IconComponent
+                      size={36}
+                      className="mb-4  absolute top-8  left-5 transition-transform duration-300"
+                    />
+                    <h3 className="text-primary-text absolute bottom-10 text-2xl leading-tight">
+                      {service.title}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Back of card */}
+                <div className={`
+                  absolute inset-0 w-full h-full backface-hidden rotate-y-180
+                  ${service.bgColor} ${service.hoverColor}
+                  rounded-2xl p-6 shadow-lg
+                `}>
+                  <div className="flex flex-col gap-3 h-full justify-center">
+                    <p className="text-primary-text text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           );
@@ -132,6 +133,21 @@ const Service_Section = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </section>
   );
 };

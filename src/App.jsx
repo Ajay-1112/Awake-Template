@@ -6,13 +6,12 @@ import Navbar from "./Components/Navbar/Navbar";
 import About_Section from "./Components/About_Section.jsx";
 import Service_Section from "./Components/Service_Section";
 import Past_Work_Section from "./Components/Past_Work_Section";
-import Team_Section from "./Components/Team_Section";
 import Faq_Section from "./Components/Faq_Section";
-import AwakeFooter from "./Components/Footer_Section";
+import Footer from "./Components/Footer_Section";
 import Testimonial_Section from "./Components/Testimonial_Section";
 import Pricing_Section from "./Components/Pricing_Section";
-
-import AwardsSection from "./Components/Awards_Section";
+import About_me from "./Components/About_me.jsx";
+import Process_section from "./Components/Process_section.jsx";
 
 // Enhanced Animations
 const container = {
@@ -46,7 +45,7 @@ const App = () => {
       {/* Hero Section */}
       <motion.section
         id="home"
-        className=" min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-12 md:pt-4 md:pb-0 lg:pt-32 "
+        className=" min-h-screen bg-[#454A2A] rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-28  md:pb-0 lg:pt-36 "
         style={{
           background: `
             radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
@@ -60,16 +59,15 @@ const App = () => {
         viewport={{ once: true, amount: 0.4 }}
       >
         <motion.h1
-          className="text-[55px] md:text-7xl lg:text-9xl font-semibold text-primary-text mb-6 leading-tight max-w-7xl"
+          className="text-[55px] md:text-6xl lg:text-8xl font-semibold text-primary-text mb-6 leading-tight max-w-7xl"
           variants={fadeUp}
         >
-          Building bold brands {""}
-          <span className="hidden md:inline">
-            <br />
+          Helping <span className="text-secondary-text font-medium font-instrument-serif italic">
+            Business Owners {""}
           </span>
-          with{" "}
+          Understand their Numbers to {""}
           <span className="text-secondary-text font-medium font-instrument-serif italic">
-            thoughtful design
+            Drive Results
           </span>
         </motion.h1>
 
@@ -77,10 +75,7 @@ const App = () => {
           className="text-base md:text-lg lg:text-xl text-secondary-text  mb-8 max-w-3xl"
           variants={fadeUp}
         >
-          At Awake, we help small startups tackle the world's biggest challenges
-          with tailored solutions—guiding you from strategy to success.
-        </motion.p>
-
+          Our personalized and data-focused approach ensures you gain clarity and confidence without being overwhelmed by the details.   </motion.p>
         <motion.div
           className="text-center md:flex gap-5 items-center"
           variants={fadeUp}
@@ -125,8 +120,7 @@ const App = () => {
 
               {/* Trust Text */}
               <p className="text-secondary-text text-sm font-medium">
-                Trusted by 1000+ clients
-              </p>
+                Trusted by Hawaii’s local business community </p>
             </div>
           </div>
         </motion.div>
@@ -139,19 +133,20 @@ const App = () => {
       {[
         { id: "About", Component: About_Section },
         { id: "Services", Component: Service_Section },
+        { id: "Process", Component: Process_section },
         { id: "Projects", Component: Past_Work_Section },
-        { id: "Team", Component: Team_Section },
+        { id: "About_me", Component: About_me },
         { id: "Testimonial", Component: Testimonial_Section },
         { id: "Pricing", Component: Pricing_Section },
         { id: "Faq", Component: Faq_Section },
-        { id: "Awards", Component: AwardsSection },
+        // { id: "AboutMe", Component: About_me },
 
         // eslint-disable-next-line no-unused-vars
       ].map(({ id, Component }) => (
         <motion.section
           key={id}
           id={id}
-          className="  pt-10 md:pt-20"
+          className="  pt-10 md:pt-20 scroll"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -161,7 +156,7 @@ const App = () => {
         </motion.section>
       ))}
 
-      <AwakeFooter />
+      <Footer />
     </div>
   );
 };

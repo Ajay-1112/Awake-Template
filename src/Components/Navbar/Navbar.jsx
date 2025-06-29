@@ -12,10 +12,10 @@ const Navbar = () => {
     { id: "home", label: "Home" },
     { id: "About", label: "About Us" },
     { id: "Services", label: "Services" },
+    { id: "Process", label: "Process" },
     { id: "Projects", label: "Projects" },
-    { id: "Team", label: "Team" },
     { id: "Pricing", label: "Pricing" },
-    { id: "Awards", label: "Awards" },
+    { id: "Faq", label: "Faq" }
   ];
 
   // Handle scroll detection for navbar background
@@ -103,21 +103,16 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed max-w-7xl mx-5 md:mx-auto top-6 md:top-3 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-          isScrolled
-            ? " bg-white1/90 rounded-3xl md:backdrop-blur-lg md:shadow-lg md:border md:border-gray-200/50 md:rounded-full"
-            : "bg-transparent"
-        } px-4 sm:px-6 py-3 md:py-4 lg:px-8`}
+        className={`fixed max-w-7xl mx-5 md:mx-auto top-6 md:top-3 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled
+          ? " bg-white1/90 rounded-3xl md:backdrop-blur-lg md:shadow-lg md:border md:border-gray-200/50 md:rounded-full"
+          : "bg-transparent"
+          } px-4 sm:px-6 py-3 md:py-4 lg:px-8 h-24 `}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-full">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <div className="w-4 h-4 bg-white rounded-full"></div>
-            </div>
-            <h2 className="text-2xl font-bold">Awake</h2>
+            <img src="/images/logo options -01.png" alt="" className="h-40 w-40 -ml-4 " />
           </div>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center">
             <div className="flex items-center space-x-1 rounded-full p-1.5 bg-gray-100/80 backdrop-blur-sm border border-gray-200/50 shadow-sm">
               {navItems.map((item, index) => (
@@ -128,11 +123,10 @@ const Navbar = () => {
                     e.preventDefault();
                     handleNavClick(item.id);
                   }}
-                  className={`relative cursor-pointer px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ease-out ${
-                    activeSection === item.id
-                      ? "bg-white shadow-lg text-secondary-text"
-                      : "text-primary hover:text-gray-900 hover:bg-white/70"
-                  }`}
+                  className={`relative cursor-pointer px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ease-out ${activeSection === item.id
+                    ? "bg-white shadow-lg text-secondary-text"
+                    : "text-primary hover:text-gray-900 hover:bg-white/70"
+                    }`}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <span className="relative z-10">{item.label}</span>
@@ -162,19 +156,16 @@ const Navbar = () => {
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
               <span
-                className={`block h-0.5 w-6 bg-gray-900 transition-all duration-300 ${
-                  isMobileMenuOpen ? "rotate-45 translate-y-0.5" : ""
-                }`}
+                className={`block h-0.5 w-6 bg-gray-900 transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-0.5" : ""
+                  }`}
               ></span>
               <span
-                className={`block h-0.5 w-6 mt-1 transition-all duration-300 ${
-                  isMobileMenuOpen ? "opacity-0" : ""
-                }`}
+                className={`block h-0.5 w-6 mt-1 transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""
+                  }`}
               ></span>
               <span
-                className={`block h-0.5 w-6 bg-gray-900 mt-1 transition-all duration-300 ${
-                  isMobileMenuOpen ? "-rotate-45 -translate-y-2.5" : ""
-                }`}
+                className={`block h-0.5 w-6 bg-gray-900 mt-1 transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-2.5" : ""
+                  }`}
               ></span>
             </div>
           </button>
@@ -183,9 +174,8 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           ref={mobileMenuRef}
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? "opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
+            }`}
         >
           <div className="bg-white/95 backdrop-blur-lg rounded-2xl p-4 mx-2">
             <div className="space-y-1">
@@ -197,11 +187,10 @@ const Navbar = () => {
                     e.preventDefault();
                     handleNavClick(item.id);
                   }}
-                  className={`block text-secondary-text hover:text-primary-text transition-all duration-200 px-4 py-3 rounded-xl font-medium ${
-                    activeSection === item.id
-                      ? "bg-white shadow-2xl text-secondary-text"
-                      : "hover:bg-gray-50 hover:pl-6"
-                  }`}
+                  className={`block text-secondary-text hover:text-primary-text transition-all duration-200 px-4 py-3 rounded-xl font-medium ${activeSection === item.id
+                    ? "bg-white shadow-2xl text-secondary-text"
+                    : "hover:bg-gray-50 hover:pl-6"
+                    }`}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   {item.label}

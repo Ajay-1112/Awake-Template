@@ -51,9 +51,9 @@ const About_Section = () => {
   ];
 
   const statistics = [
-    { id: 1, number: 40, label: "Projects Completed", hasPlus: true },
+    { id: 1, number: 20, label: "Clients Helped", hasPlus: true },
     { id: 2, number: 15, label: "Years Of Experience", hasPlus: true },
-    { id: 3, number: 12, label: "Design Awards", hasPlus: true },
+    { id: 3, number: 200, label: "Hours of Data Audited", hasPlus: true },
   ];
 
   const [startCount, setStartCount] = useState(false);
@@ -91,10 +91,8 @@ const About_Section = () => {
     <section id="about" className="max-w-7xl mx-auto px-6  md:pt-10">
       {/* Skills Header */}
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-3xl lg:text-5xl font-semibold text-primary-text mb-8">
-          Crafting exceptional, well-experienced & technology-driven strategies
-          to drive impactful results with
-        </h2>
+        <h2 className="text-3xl md:text-3xl lg:text-5xl font-semibold text-primary-text md:px-10 mb-12">
+          Empowering decision-makers with meaningful metrics and strategic support        </h2>
 
         {/* Skill Tags */}
         <div className="flex flex-wrap justify-center gap-5 md:gap-10">
@@ -111,22 +109,21 @@ const About_Section = () => {
       </div>
 
       {/* Stats Grid */}
-      <div 
+      <div
         ref={statsRef}
         className="grid grid-cols-1 md:grid-cols-3 md:gap-8 gap-6 max-w-6xl mx-auto"
       >
         {statistics.map((stat, index) => (
           <div
             key={stat.id}
-            className={`p-8 border-border transition-all duration-300 hover:-translate-y-1 group ${
-              index !== statistics.length - 1 ? "md:border-r" : ""
-            }`}
+            className={`p-8 border-border transition-all duration-300 hover:-translate-y-1 group ${index !== statistics.length - 1 ? "md:border-r" : ""
+              }`}
           >
             <div className="text-center">
               <div className="relative mb-4">
                 <div className="text-7xl md:text-9xl font-semibold text-primary-text mb-2 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
                   {stat.hasPlus && (
-                    <span className="text-4xl md:text-6xl absolute top-0 md:left-5 left-16 font-normal text-secondary-text ml-2">
+                    <span className="text-4xl md:text-6xl absolute top-0  lg:-left-5 left-16 font-normal text-secondary-text ml-2">
                       +
                     </span>
                   )}

@@ -4,15 +4,14 @@ const Testimonial_Section = () => {
   const data = {
     testimonial: {
       sectionTitle: "Customer stories",
-      quote:
-        "Awake's expertise transformed my vision into success with creativity, precision, and a deep understanding of my goals.",
+      quote: "Data Huaka’i helped us see exactly where our operations were underperforming. Their insights saved us time and money — and gave us a new level of confidence in our decisions.",
       customer: {
-        name: "Sarah Mitchell",
-        title: "Founder of Chipsland",
+        name: "Jane M., Operations Manager",
+        title: "Island Goods",
         image:
           "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300",
         background:
-          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300",
+          "/images/Screenshot 2023-03-29 at 3.46.12 PM.png"
       },
     },
     statistics: {
@@ -20,7 +19,7 @@ const Testimonial_Section = () => {
       stats: [
         {
           value: "91%",
-          description: "clients recommend our design services.",
+          description: "of our clients recommend us to other local businesses",
         },
       ],
     },
@@ -30,30 +29,31 @@ const Testimonial_Section = () => {
       id: 1,
       type: "featured",
       title:
-        "Their creativity and attention to detail transformed our brand completely!",
+        "Before working with Data Huaka’i, we didn’t realize how much opportunity we were leaving on the table. Now we use data to guide every decision.",
       image:
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300",
+        "public/images/Screenshot 2023-03-29 at 3.43.17 PM.png",
       imageAlt: "Modern interior design with lamp and decorative objects",
     },
     {
       id: 2,
       type: "testimonial",
-      quote:
-        "Awake Design Agency brought our ideas to life with exceptional creativity and precision, exceeding expectations.",
-      author: "Sarah Mitchell",
-      position: "Marketing Head at TalentConnect",
+      quote: "We’ve worked with consultants before, but never had someone break things down so clearly and personally. Game-changing.",
+
+      author: "Maria L., Co-founder",
+      position: "Co-founder, Reef Cafe",
     },
   ];
   return (
     <div className="max-w-7xl mx-auto md:px-6 px-3 md:pt-16">
       <h2 className="text-center text-primary-text text-4xl md:text-5xl font-semibold mb-12">
-        What our satisfied customers{" "}
+        Here’s what Hawaii businesses
+        {" "}
         <span className="hidden md:inline">
           <br />
         </span>
-        are saying{" "}
+        say about {" "}
         <span className="font-instrument-serif italic font-medium text-secondary-text">
-          about us
+          Data Huaka’i
         </span>
       </h2>
 
@@ -68,7 +68,7 @@ const Testimonial_Section = () => {
           }}
         >
           <div className="z-10">
-            <div className="text-sm text-secondary-text absolute top-10 mb-4">
+            <div className="text-sm text-primary-text absolute top-10 mb-4">
               {data.testimonial.sectionTitle}
             </div>
             <blockquote className="text-xl md:text-2xl font-medium leading-snug mb-6">
@@ -90,7 +90,7 @@ const Testimonial_Section = () => {
           className="relative lg:w-[30%] min-h-[350px] 
         bg-yellow-200 rounded-2xl p-8 flex flex-col justify-start"
         >
-          <p className="text-sm text-secondary-text mb-8">
+          <p className="text-sm text-primary-text mb-8">
             {data.statistics.sectionTitle}
           </p>
 
@@ -112,9 +112,8 @@ const Testimonial_Section = () => {
         {customerStories.map((story) => (
           <div
             key={story.id}
-            className={`max-w-7xl  ${
-              story.type === "featured" ? "lg:w-[30%]" : "lg:w-[70%]"
-            } w-full`}
+            className={`max-w-7xl  ${story.type === "featured" ? "lg:w-[30%]" : "lg:w-[70%]"
+              } w-full`}
           >
             {story.type === "featured" ? (
               <div className="bg-gray-900 text-white1 rounded-2xl p-8 h-full">

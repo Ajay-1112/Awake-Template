@@ -1,11 +1,10 @@
 import React from 'react';
 import { Twitter, Linkedin, Dribbble, Instagram } from 'lucide-react';
 
-export default function AwakeFooter() {
+export default function Footer() {
   // Footer data configuration
   const footerData = {
     company: {
-      name: "Awake",
       description: "Empowering businesses with innovative solutions. Let's create something amazing together."
     },
     socialMedia: [
@@ -50,24 +49,21 @@ export default function AwakeFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo and Description */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-white1 rounded-full"></div>
-              </div>
-              <h2 className="text-xl font-bold">{footerData.company.name}</h2>
+            <div className="flex items-center gap-3 h-20">
+              <img src="/images/logo options -01.png" alt="" className="h-40 w-auto -ml-10 " />
             </div>
             <p className="text-secondary-text text-md leading-relaxed">
               {footerData.company.description}
             </p>
-            
+
             {/* Social Media Icons */}
             <div className="flex gap-4 mt-6">
               {footerData.socialMedia.map((social) => {
                 const IconComponent = social.icon;
                 return (
-                  <a 
+                  <a
                     key={social.name}
-                    href={social.href} 
+                    href={social.href}
                     className="text-secondary-text hover:text-primary-text transition-colors"
                     aria-label={social.name}
                   >
@@ -85,8 +81,8 @@ export default function AwakeFooter() {
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href} 
+                    <a
+                      href={link.href}
                       className="text-secondary-text hover:text-primary-text transition-colors text-sm"
                     >
                       {link.name}
@@ -104,8 +100,8 @@ export default function AwakeFooter() {
               {footerData.contact.details.map((detail, index) => (
                 <div key={index}>
                   {detail.href ? (
-                    <a 
-                      href={detail.href} 
+                    <a
+                      href={detail.href}
                       className="text-secondary-text hover:text-primary-text transition-colors text-sm block"
                     >
                       {detail.content}
