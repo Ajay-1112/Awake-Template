@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 import Button from "./Components/Button";
 import LogoMarquee from "./Components/Marquee";
 import Navbar from "./Components/Navbar/Navbar";
-import About_Section from "./Components/About_Section.jsx";
+import About_Section from "./Components/Why_us.jsx";
 import Service_Section from "./Components/Service_Section";
 import Past_Work_Section from "./Components/Past_Work_Section";
 import Faq_Section from "./Components/Faq_Section";
@@ -59,14 +59,15 @@ const App = () => {
         viewport={{ once: true, amount: 0.4 }}
       >
         <motion.h1
-          className="text-[55px] md:text-6xl lg:text-8xl font-semibold text-primary-text mb-6 leading-tight max-w-7xl"
+          className="text-[55px] md:text-6xl lg:text-8xl font-semibold text-primary-text mb-6 leading-tight max-w-7xl drop-shadow-lg"
           variants={fadeUp}
         >
-          Turning Your Numbers into Actionable {""}
-          <span className="text-secondary-text font-medium font-instrument-serif italic">
-          Business Strategies
+          Turning Your Numbers into Actionable{" "}
+          <span className="text-secondary-text font-medium font-instrument-serif italic ">
+            Business Strategies
           </span>
         </motion.h1>
+
 
         <motion.p
           className="text-base md:text-lg lg:text-xl text-secondary-text  mb-8 max-w-3xl"
@@ -126,17 +127,15 @@ const App = () => {
         </motion.div>
       </motion.section>
 
-      {/* Reuse the same animation for all sections */}
       {[
-        { id: "About", Component: About_Section },
+        { id: "About", Component: About_me },
         { id: "Services", Component: Service_Section },
+        { id: "About_Us", Component: About_Section },
         { id: "Process", Component: Process_section },
         { id: "Projects", Component: Past_Work_Section },
-        { id: "About_me", Component: About_me },
         { id: "Testimonial", Component: Testimonial_Section },
         { id: "Pricing", Component: Pricing_Section },
         { id: "Faq", Component: Faq_Section },
-        // { id: "AboutMe", Component: About_me },
 
         // eslint-disable-next-line no-unused-vars
       ].map(({ id, Component }) => (

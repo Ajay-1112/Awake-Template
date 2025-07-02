@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-import Button from "../Components/Button"; 
+import Button from "../Components/Button";
 
 const Past_Work_Section = () => {
   const cardData = [
@@ -82,14 +82,26 @@ const Past_Work_Section = () => {
           </div>
         ))}
       </div>
-      <div className="text-end mt-5">
-        <Button
-          text="View More "
-          className="text-white hover:bg-green-700 bg-green-900 w-42"
-          link="https://thewebnavigators.com/portfolio"
-          />
+      <div className="bg-primary md:max-w-7xl mx-3 mt-10 md:mx-auto p-8 md:p-9 mb-10 rounded-4xl text-white1 shadow-2xl">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="text-center md:text-left px-3 mb-3 md:mb-0 md:mr-8">
+            <h3 className="text-2xl md:text-2xl font-semibold">
+              See Our Work in Action. Start Your Creative {""}
+              <span className="hidden md:inline">
+                <br />
+              </span>
+              Journey with Us!
+            </h3>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button text="Browse Projects" link="https://thewebnavigators.com/portfolio" className="bg-gray-100 text-black min-w-44" />
+            <Button text="Book A Call" link="" className="bg-black text-white min-w-44 border " />
+          </div>
+        </div>
       </div>
     </section>
+
   );
 };
 

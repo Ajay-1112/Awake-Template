@@ -16,7 +16,7 @@ const Button = ({ text = "Let's Collaborate", link = "", className = "" }) => {
           `}
         >
           <span className="relative z-10  font-medium">{text}</span>
-          <div className="w-7 h-7 bg-white1 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
+          <div className="w-7 h-7 bg-white1 rounded-full flex items-center justify-center group-hover:rotate-35 transition-transform duration-300">
             <svg
               className="w-4 h-4 text-gray-900"
               fill="currentColor"

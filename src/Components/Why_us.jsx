@@ -92,7 +92,11 @@ const About_Section = () => {
       {/* Skills Header */}
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-3xl lg:text-5xl font-semibold text-primary-text md:px-10 mb-12">
-          Empowering decision-makers with meaningful metrics and strategic support        </h2>
+          Why Us ?</h2>
+
+        <p className="text-lg md:text-xl text-secondary-text max-w-4xl mx-auto mb-12">
+          We empower decision-makers with meaningful metrics and strategic support, driven by Creativity, Innovation, and proven Strategy.
+        </p>
 
         {/* Skill Tags */}
         <div className="flex flex-wrap justify-center gap-5 md:gap-10">
