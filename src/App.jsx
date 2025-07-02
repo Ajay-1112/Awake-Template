@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 import Button from "./Components/Button";
 import LogoMarquee from "./Components/Marquee";
 import Navbar from "./Components/Navbar/Navbar";
-import About_Section from "./Components/Why_us.jsx";
+import Why_Us from "./Components/Why_us.jsx";
 import Service_Section from "./Components/Service_Section";
 import Past_Work_Section from "./Components/Past_Work_Section";
 import Faq_Section from "./Components/Faq_Section";
@@ -125,9 +125,9 @@ const App = () => {
       </motion.section>
 
       {[
-        // { id: "About", Component: About_me },
+        { id: "About", Component: About_me },
         { id: "Services", Component: Service_Section },
-        { id: "About_Us", Component: About_Section },
+        { id: "About_Us", Component: Why_Us },
         // { id: "Process", Component: Process_section },
         { id: "Projects", Component: Past_Work_Section },
         { id: "Testimonial", Component: Testimonial_Section },

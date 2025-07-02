@@ -11,7 +11,7 @@ const Button = ({ text = "Let's Collaborate", link = "", className = "" }) => {
             transition-all duration-300 
             items-center  
             shadow-lg hover:shadow-xl hover:scale-105
-            min-w-40
+            min-w-48
             ${className}
           `}
         >

@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import Button from "./Button";
 import { Database, ClipboardList, Settings, AreaChart } from "lucide-react";
 
 const Service_Section = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
 
   const services = [
     {
@@ -60,60 +58,46 @@ const Service_Section = () => {
       </div>
 
       <div className="text-center mt-10 mb-10">
-        <p className="text-sm md:text-lg text-secondary-text max-w-5xl mx-auto">
+        <p className="text-sm md:text-lg text-secondary-text max-w-4xl mx-auto">
           At Data Huaka'i, we provide personalized data analysis and consulting services to help small to mid-sized businesses in Hawaii make informed choices based on clear data to grow their business.
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="flex flex-col px-3 md:px-0  md:flex-row justify-center gap-3 sm:gap-4 mb-16 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row flex-wrap justify-center gap-4 px-3 md:px-0 mb-16 max-w-7xl mx-auto">
         {services.map((service) => {
           const IconComponent = service.icon;
           return (
             <div
               key={service.id}
-              className="w-full sm:h-60 h-50  perspective-1000"
-              onMouseEnter={() => setHoveredCard(service.id)}
-              onMouseLeave={() => setHoveredCard(null)}
+              className="w-full sm:w-[48%] lg:w-[23%] sm:h-auto h-auto perspective-1000"
             >
-              <div className={`
-                relative w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer
-                ${hoveredCard === service.id ? 'rotate-y-180' : ''}
-              `}>
-                {/* Front of card */}
-                <div className={`
-                  absolute inset-0 w-full h-full backface-hidden
-                  ${service.bgColor} ${service.hoverColor}
-                  rounded-2xl p-8 shadow-lg
-                `}>
-                  <div className="flex flex-col gap-2 h-full justify-center">
-                    <IconComponent
-                      size={36}
-                      className="mb-4  absolute top-8  left-5 transition-transform duration-300"
-                    />
-                    <h3 className="text-primary-text absolute bottom-10 text-2xl leading-tight">
-                      {service.title}
-                    </h3>
+              <div
+                className={`
+            relative w-full h-full transform-style-preserve-3d transition-all duration-500 group rounded-2xl shadow-lg overflow-hidden
+            ${service.bgColor} ${service.hoverColor} hover:scale-[1.02]
+          `}
+              >
+                <div className="h-full p-8 justify-between text-primary-text">
+                  {/* Icon */}
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/70 backdrop-blur-sm">
+                    <IconComponent size={32} />
                   </div>
-                </div>
 
-                {/* Back of card */}
-                <div className={`
-                  absolute inset-0 w-full h-full backface-hidden rotate-y-180
-                  ${service.bgColor} ${service.hoverColor}
-                  rounded-2xl p-6 shadow-lg
-                `}>
-                  <div className="flex flex-col gap-3 h-full justify-center">
-                    <p className="text-primary-text text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
+                  {/* Title */}
+                  <h3 className="text-2xl pt-8  ">
+                    {service.title}
+                  </h3>
+
+                
+
                 </div>
               </div>
             </div>
           );
         })}
       </div>
+
 
       <div className="bg-primary md:max-w-7xl mx-3 md:mx-auto p-8 md:p-9 mb-10 rounded-4xl text-white1 shadow-2xl">
         <div className="flex flex-col md:flex-row items-center justify-between">
@@ -133,21 +117,6 @@ const Service_Section = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-        .transform-style-preserve-3d {
-          transform-style: preserve-3d;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-      `}</style>
     </section>
   );
 };

@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "About", label: "About Me" },
+    { id: "About", label: "About" },
     { id: "Services", label: "Services" },
     // { id: "Process", label: "Process" },
     { id: "Projects", label: "Projects" },
@@ -102,12 +102,12 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed max-w-7xl mx-5 md:mx-auto top-6 md:top-3 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled
-          ? " bg-white1/70 rounded-3xl md:backdrop-blur-lg md:shadow-lg  md:rounded-full"
+        className={`fixed max-w-[1400px] mx-5 md:mx-auto top-6 md:top-3 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled
+          ? " bg-white1/70 rounded-3xl md:backdrop-blur-lg md:shadow-lg md:rounded-full"
           : "bg-transparent"
-          } px-4 sm:px-6 py-3 md:py-4 lg:px-8 md:h-20 h-16`}
+          } px-4 sm:px-6 py-3 md:py-4 lg:px-8 md:h-24 h-16`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-full">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between h-full">
           <div className="flex items-center gap-3">
             <img src="/images/logo options -01.png" alt="" className="h-auto w-40 -ml-4  object-left-top " />
           </div>
@@ -122,7 +122,7 @@ const Navbar = () => {
                     e.preventDefault();
                     handleNavClick(item.id);
                   }}
-                  className={`relative cursor-pointer px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ease-out ${activeSection === item.id
+                  className={`relative cursor-pointer  px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ease-out ${activeSection === item.id
                     ? "bg-white shadow-lg text-secondary-text"
                     : "text-primary hover:text-gray-900 hover:bg-white/70"
                     }`}

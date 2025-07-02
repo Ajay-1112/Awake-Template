@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import CountUp from "react-countup";
 
-const About_Section = () => {
+const Why_Us = () => {
   const skills = [
     {
       id: 1,
@@ -170,4 +170,4 @@ const About_Section = () => {
   );
 };
 
-export default About_Section;
+export default Why_Us;

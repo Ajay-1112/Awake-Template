@@ -78,7 +78,7 @@ const Pricing_Section = () => {
               {/* Right */}
               <div className="md:w-1/2">
                 <h3 className="font-semibold mb-4">Features</h3>
-                <ul className="pl-7 md:pl-0  text-sm space-y-2">
+                <ul className="sm:pl-7 md:pl-0  text-sm space-y-2">
                   {plan.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}

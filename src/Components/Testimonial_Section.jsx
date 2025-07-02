@@ -85,7 +85,7 @@ const Testimonial_Section = () => {
          Here’s what Hawaii businesses<br/>
         say about <span className="font-instrument-serif font-medium">Data Huaka’i</span></h2>
 
-      <div className="relative flex flex-col items-center justify-center overflow-hidden py-10">
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-10">
         <Marquee pauseOnHover className="[--duration:20s] space-x-6">
           {firstRow.map((review) => (
             <ReviewCard key={review.name} {...review} />
