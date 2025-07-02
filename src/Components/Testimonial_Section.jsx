@@ -83,7 +83,7 @@ const Testimonial_Section = () => {
     <div>
       <h2 className="text-3xl md:text-3xl lg:text-5xl font-semibold text-primary-text md:px-10 mb-12 text-center">
          Here’s what Hawaii businesses<br/>
-        say about <span className="font-instrument-serif font-medium">Data Huaka’i</span></h2>
+        say about <span className="font-instrument-serif italic font-medium">Data Huaka’i</span></h2>
 
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-10">
         <Marquee pauseOnHover className="[--duration:20s] space-x-6">

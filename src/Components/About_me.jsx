@@ -7,8 +7,7 @@ const About_me = () => {
                 <div className="inline-block">
                     <span className="text-secondary-text text-sm font-medium tracking-widest uppercase mb-4 block">About the Founder</span>
                     <h2 className="text-2xl tracking-tight font-extrabold text-primary-text sm:text-3xl md:text-5xl relative">
-                        My Founder Story
-                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary-text rounded-full"></div>
+                        My Founder <span className='font-instrument-serif italic font-medium'>Story</span>
                     </h2>
                 </div>
             </div>
