@@ -1,4 +1,3 @@
-import { div } from "framer-motion/client";
 import React, { useEffect, useState, useRef } from "react";
 import CountUp from "react-countup";
 
@@ -97,7 +96,7 @@ const About_Section = () => {
       {/* Skills Header */}
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-3xl lg:text-5xl font-semibold text-primary-text md:px-10 mb-12">
-          Why <span className="font-instrument-serif italic">Us ?</span></h2>
+          Why <span className="font-instrument-serif font-medium italic">Us ?</span></h2>
 
         <p className="text-lg md:text-xl text-secondary-text max-w-4xl mx-auto mb-12">
           We empower decision-makers with meaningful metrics and strategic support, driven by Creativity, Innovation, and proven Strategy.

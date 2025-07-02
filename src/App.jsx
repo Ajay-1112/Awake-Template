@@ -55,7 +55,7 @@ const App = () => {
         viewport={{ once: true, amount: 0.4 }}
       >
         <motion.h1
-          className="text-[55px] md:text-6xl lg:text-8xl font-semibold  mb-6 leading-tight max-w-7xl bg-gradient-to-tl from-black to-gray-300 bg-clip-text text-transparent"
+          className="text-[55px] md:text-6xl lg:text-8xl font-semibold   mb-6 leading-tight max-w-7xl bg-gradient-to-br from-black to-gray-300 bg-clip-text text-transparent"
           variants={fadeUp}
         >
           Turning Your Numbers into Actionable{" "}

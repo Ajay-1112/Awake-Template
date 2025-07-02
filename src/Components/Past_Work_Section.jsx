@@ -1,107 +1,80 @@
-import React from "react";
-import { ArrowUpRight } from "lucide-react";
-import Button from "../Components/Button";
+import Button from "./Button";
+
+const features = [
+  {
+    title: "Keshah Quizn",
+    image: "/images/portfolio_img/Proper.webp",
+    details:
+      "Our client, Andrew Davies from Studio Proper, envisioned a digital platform that reflected the timeless elegance and precision their physical products represent. We delivered a bespoke website and backend system that allows customers to explore, customize, and purchase accessories with ease. With smooth transitions, responsive design, and an intuitive product gallery, the platform mirrors Apple-like quality, elevating the brand's identity online.",
+    tutorialLink: "#",
+  },
+  {
+    title: "AI Image Restyle",
+    image: "/images/portfolio_img/Artify-Image-Restyle.webp",
+    details:
+      "An aspiring entrepreneur approached us with a concept to let users transform their selfies using AI-powered filters. We developed a fast, intuitive platform where users can upload images and instantly apply artistic transformations, powered by deep learning models. The project included a custom-trained AI pipeline, filter previewing, mobile optimization, and a scalable backend for high traffic. Influencers and casual users alike now use it to create standout content effortlessly.",
+    tutorialLink: "#",
+  },
+  {
+    title: "Gu-Wi Admin Dashboard",
+    image: "/images/portfolio_img/Gu-Wi-Dashboard.webp",
+    details:
+      "GuWi, a top-tier house cleaning service, needed a powerful dashboard to track bookings, team assignments, customer feedback, and service history. We designed and built a robust admin interface with real-time analytics, user management, and dynamic scheduling tools. The solution reduced their manual operations by over 60% and allowed their internal team to respond faster to customer needs while scaling their field operations.",
+    tutorialLink: "#",
+  },
+  {
+    title: "Gu-Wi Quote Builder",
+    image: "/images/portfolio_img/GuWiGuttersAndWindows.webp",
+    details:
+      "To eliminate manual quoting for GuWi’s window and gutter cleaning services, we developed an intelligent quote builder that integrated directly with JotForm submissions. The tool automatically generated two quote versions based on service area, size, and complexity, providing customers with instant estimates. This significantly improved their lead conversion rates and created a seamless first-touch experience for potential clients.",
+    tutorialLink: "#",
+  },
+];
+
 
 const Past_Work_Section = () => {
-  const cardData = [
-    {
-      image:
-        "/images/portfolio_img/Proper.webp",
-      title: "Keshah Quizn",
-      sub_title:
-        "Our client, Andrew Davies from Studio Proper, is a brand driven by timeless elegance and innovative design, inspired by the sophistication of Apple. They specialize in crafting high-quality, functional tech accessories that combine beauty with simplicity, designed to enhance the experience of personal and professional tech.",
-    },
-    {
-      image:
-        "/images/portfolio_img/Artify-Image-Restyle.webp",
-      title: "AI Image Restyle",
-      sub_title:
-        "Our client, an aspiring entrepreneur, approached The Web Navigators to create a cutting-edge platform for social media influencers, photographers, and casual users to transform their photos effortlessly using AI-powered filters."
-    },
-    {
-      image:
-        "/images/portfolio_img/Gu-Wi-Dashboard.webp",
-      title: "Gu-Wi Admin Dashboard",
-      sub_title:
-        "Our client, GuWi, a leading house cleaning service provider, approached The Web Navigators to build a comprehensive admin dashboard that would streamline their service management and analytics."
-    },
-    {
-      image:
-        "/images/portfolio_img/GuWiGuttersAndWindows.webp",
-      title: "Gu-Wi Quote Builder",
-      sub_title:
-        "Our client, Gavin Gene from Gu-Wi, approached The Web Navigators to streamline the quoting process for their business by creating a custom tool that automatically generates two quotes for customers using data from JotForm.",
-    },
-  ];
-
   return (
-    <section className="max-w-7xl mx-auto px-3 md:px-6 md:py-10">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-primary-text  mb-4">
-          How we transformed a small{" "}
-          <span className="hidden md:inline">
-            <br />
-          </span>{" "}
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="max-w-7xl w-full py-10 px-6">
+        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-7xl md:text-center md:mx-auto">
+          How we transformed a small <br />
           business’s{" "}
-          <span className="italic text-secondary-text font-medium  font-instrument-serif">
+          <span className="font-instrument-serif italic font-medium">
             online presence
           </span>
         </h2>
-      </div>
-
-      <div className="grid grid-cols-2 gap-6 cursor-pointer">
-        {cardData.map((card, index) => (
-          <div
-            key={index}
-            className="relative group overflow-hidden rounded-2xl  transition-transform duration-300 hover:scale-[1.02]"
-          >
-            {/* Image */}
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full md:h-80 h-40 object-cover rounded-2xl"
-            />
-
-            {/* Hover overlay */}
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex justify-end items-start p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-              <div className="text-white bg-black/60 rounded-full p-2" onClick={() => window.location.href = "https://www.thewebnavigators.com/portfolio"}>
-                <ArrowUpRight className="w-5 h-5" />
+        <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
+          {features.map((feature) => (
+            <div
+              key={feature.title}
+              className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse"
+            >
+              <div className="w-full aspect-[6/4] bg-muted rounded-xl border border-border/50 basis-1/2 overflow-hidden">
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="basis-1/2 shrink-0">
+                <h4 className="my-3 text-3xl font-semibold tracking-tight">
+                  {feature.title}
+                </h4>
+                <p className="text-muted-foreground text-[17px]">
+                  {feature.details.length > 250
+                    ? `${feature.details.substring(0, 250)}...`
+                    : feature.details}
+                </p>
+                <Button
+                  className="mt-4 bg-black hover:bg-black/70 text-white"
+                  text="Know More"
+                />
               </div>
             </div>
-
-            {/* Text content */}
-            <div className="md:p-4 relative z-20  px-1 ">
-              <h3 className="md:text-xl text-sm font-bold mt-2 text-primary-text ">
-                {card.title}
-              </h3>
-              <div className="flex flex-wrap items-center gap-3 mt-2  text-secondary-text sm:text-sm text-[12px]">
-                {card.sub_title?.split(" ").slice(0, 12).join(" ") + (card.sub_title?.split(" ").length > 15 ? "..." : "")}
-              </div>
-
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="bg-primary md:max-w-7xl mx-3 mt-10 md:mx-auto p-8 md:p-9 mb-10 rounded-4xl text-white1 shadow-2xl">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="text-center md:text-left px-3 mb-3 md:mb-0 md:mr-8">
-            <h3 className="text-2xl md:text-2xl font-semibold">
-              See Our Work in Action. Start Your Creative {""}
-              <span className="hidden md:inline">
-                <br />
-              </span>
-              Journey with Us!
-            </h3>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button text="Browse Projects" link="https://thewebnavigators.com/portfolio" className="bg-gray-100 text-black min-w-44" />
-            <Button text="Book A Call" link="" className="bg-black text-white min-w-44 border " />
-          </div>
+          ))}
         </div>
       </div>
-    </section>
-
+    </div>
   );
 };
 

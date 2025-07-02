@@ -93,9 +93,8 @@ const Pricing_Section = () => {
           Ready to Harness the Power of {" "}
           <span className="font-instrument-serif font-medium text-secondary-text italic">Your Data?</span>
         </h2>
-        <p className="text-lg text-secondary-text mt-4 mb-12 max-w-6xl mx-auto">
-          You don’t need more data — you need a better plan.<br />
-          Let’s create one that transforms insights into real-world results.        </p>
+        <p className="text-lg text-secondary-text mt-4 mb-8 max-w-6xl mx-auto">
+          You don’t need more data — you need a better plan.  </p>
         <Button text="Book a Discovery Call" href="/contact" className="bg-black text-white " />
       </div>
     </>
