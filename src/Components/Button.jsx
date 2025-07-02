@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ text = "Let's Collaborate", link = "#", className = "" }) => {
+const Button = ({ text = "Let's Collaborate", link = "", className = "" }) => {
   return (
     <div className="inline-block">
       <a href={link}>
@@ -11,6 +11,7 @@ const Button = ({ text = "Let's Collaborate", link = "#", className = "" }) => {
             transition-all duration-300 
             items-center  
             shadow-lg hover:shadow-xl hover:scale-105
+            min-w-40
             ${className}
           `}
         >
@@ -28,7 +29,7 @@ const Button = ({ text = "Let's Collaborate", link = "#", className = "" }) => {
               />
             </svg>
           </div>
-          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 "></div>
         </button>
       </a>
     </div>

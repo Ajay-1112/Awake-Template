@@ -39,13 +39,13 @@ const fadeUp = {
 };
 const App = () => {
   return (
-    <div className="w-full font-inter">
+    <div className="w-full font-inter bg-gray-50 ">
       <Navbar />
 
       {/* Hero Section */}
       <motion.section
         id="home"
-        className=" min-h-screen bg-[#454A2A] rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-28  md:pb-0 lg:pt-36 "
+        className=" min-h-screen  rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-28  md:pb-0 lg:pt-36 "
         style={{
           background: `
             radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
@@ -62,12 +62,9 @@ const App = () => {
           className="text-[55px] md:text-6xl lg:text-8xl font-semibold text-primary-text mb-6 leading-tight max-w-7xl"
           variants={fadeUp}
         >
-          Helping <span className="text-secondary-text font-medium font-instrument-serif italic">
-            Business Owners {""}
-          </span>
-          Understand their Numbers to {""}
+          Turning Your Numbers into Actionable {""}
           <span className="text-secondary-text font-medium font-instrument-serif italic">
-            Drive Results
+          Business Strategies
           </span>
         </motion.h1>
 
@@ -83,7 +80,7 @@ const App = () => {
           <Button
             text="Get Started"
             link="#Services"
-            className="bg-blue-600  w-40 text-white1"
+            className="bg-green-900 hover:bg-green-700 w-40 text-white1"
           />
           <div className="md:flex gap-5 mt-6 md:mt-0 justify-center items-center space-y-3 ">
             <div className="flex mt-2 items-center justify-center">
@@ -146,7 +143,7 @@ const App = () => {
         <motion.section
           key={id}
           id={id}
-          className="  pt-10 md:pt-20 scroll"
+          className="scroll py-5"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

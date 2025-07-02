@@ -5,30 +5,31 @@ const Process_section = () => {
 
     const steps = [
         {
-            number: 1,
-            title: "Audit",
-            description:
-                "And then, you guessed it... we are going to dazzle them with a really informative answer right here. Lorem ipsum dolor amet pickled roof party artisan cray organic.",
+          number: 1,
+          title: "Audit",
+          description:
+            "We begin by analyzing your current processes, identifying strengths, gaps, and areas of opportunity through a comprehensive audit.",
         },
         {
-            number: 2,
-            title: "Planning",
-            description:
-                "And then, you guessed it... we are going to dazzle them with a really informative answer right here. Lorem ipsum dolor amet pickled roof party artisan cray organic.",
+          number: 2,
+          title: "Planning",
+          description:
+            "Based on insights from the audit, we craft a tailored roadmap with clear objectives, strategies, and timelines aligned with your business goals.",
         },
         {
-            number: 3,
-            title: "Implementation",
-            description:
-                "And then, you guessed it... we are going to dazzle them with a really informative answer right here. Lorem ipsum dolor amet pickled roof party artisan cray organic.",
+          number: 3,
+          title: "Implementation",
+          description:
+            "Our team executes the strategy using best practices and proven tools to bring your vision to life, ensuring smooth and scalable deployment.",
         },
         {
-            number: 4,
-            title: "Measure",
-            description:
-                "And then, you guessed it... we are going to dazzle them with a really informative answer right here. Lorem ipsum dolor amet pickled roof party artisan cray organic.",
+          number: 4,
+          title: "Measure",
+          description:
+            "We track performance through key metrics, evaluate results, and continuously refine the approach to ensure lasting impact and growth.",
         },
-    ];
+      ];
+      
     return (
         <section className='px-4 py-16 mx-auto max-w-7xl sm:px-6 ' id='Process'>
             <h1 className='text-5xl text-center text-primary-text font-bold'>Our Process</h1>
@@ -69,7 +70,7 @@ const Process_section = () => {
                                     <h3 className="mt-4 sm:mt-6 text-xl font-semibold leading-tight text-gray-900  md:mt-10">
                                         {step.title}
                                     </h3>
-                                    <p className="mt-3 sm:mt-4 text-base text-gray-600 ">
+                                    <p className="mt-3 sm:mt-4 text-base text-center text-gray-600 ">
                                         {step.description}
                                     </p>
                                 </div>

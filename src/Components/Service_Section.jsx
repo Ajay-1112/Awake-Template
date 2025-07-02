@@ -72,7 +72,7 @@ const Service_Section = () => {
           return (
             <div
               key={service.id}
-              className="w-full sm:h-70 h-60  perspective-1000"
+              className="w-full sm:h-60 h-50  perspective-1000"
               onMouseEnter={() => setHoveredCard(service.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -128,8 +128,8 @@ const Service_Section = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button text="Get Started" link="/get-started" className="bg-gray-100 text-black w-44" />
-            <Button text="View Portfolio" link="/portfolio" className="bg-black text-white w-44 border " />
+            <Button text="Browse Projects" link="#Projects" className="bg-gray-100 text-black min-w-44" />
+            <Button text="Book A Call" link="" className="bg-black text-white min-w-44 border " />
           </div>
         </div>
       </div>

@@ -57,7 +57,7 @@ const LogoMarquee = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <div className="lg:max-w-7xl max-w-96 mx-auto pt-12 md:pt-26 overflow-hidden">
+    <div className="lg:max-w-7xl max-w-96 mx-auto pt-12 md:pt-18 overflow-hidden">
       <div class="flex items-center justify-center mb-5 gap-8 md:mb-12 px-4">
         <hr class="flex-1 hidden lg:inline max-w-90 border-t border-gray-300" />
         <p class="  mx-auto text-secondary-text text-center md:whitespace-nowrap">
@@ -67,8 +67,8 @@ const LogoMarquee = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 w-16 md:w-32 h-full  z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 w-16 md:w-32 h-full  z-10 pointer-events-none" />
 
         {/* Marquee container */}
         <div className="overflow-hidden">
@@ -76,7 +76,7 @@ const LogoMarquee = () => {
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={`${logo.name}-${index}`}
-                className="inline-flex items-center justify-center border border-border mx-4 md:mx-8 px-4 md:px-8 py-4 md:py-6 rounded-xl md:rounded-2xl bg-white  transition-transform duration-300 hover:scale-110 flex-shrink-0 min-w-[150px] md:min-w-[200px]"
+                className="inline-flex items-center justify-center mx-4 md:mx-8 px-4 md:px-8 py-4 md:py-6 rounded-xl md:rounded-2xl  transition-transform duration-300 hover:scale-110 flex-shrink-0 min-w-[150px] md:min-w-[200px]"
               >
                 <img
                   src={logo.src}
