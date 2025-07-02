@@ -39,7 +39,7 @@ const fadeUp = {
 };
 const App = () => {
   return (
-    <div className="w-full font-inter bg-gray-50 ">
+    <div className="w-full font-Geist bg-gray-50   ">
       <Navbar />
 
       {/* Hero Section */}
@@ -47,11 +47,7 @@ const App = () => {
         id="home"
         className=" min-h-screen  rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-28  md:pb-0 lg:pt-36 "
         style={{
-          background: `
-            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
-            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2), transparent 45%),
-            radial-gradient(circle at 50% 70%, rgba(255, 255, 255, 0.15), transparent 50%),
-            linear-gradient(180deg, #eaf6fc 0%, #f3fafd 50%, #ffffff 100%)`,
+          background: "linear-gradient(to right, #E2F6FD 20%, #FEF7E6 80%, #FFFFFF 100%)"
         }}
         variants={container}
         initial="hidden"
@@ -59,7 +55,7 @@ const App = () => {
         viewport={{ once: true, amount: 0.4 }}
       >
         <motion.h1
-          className="text-[55px] md:text-6xl lg:text-8xl font-semibold text-primary-text mb-6 leading-tight max-w-7xl drop-shadow-lg"
+          className="text-[55px] md:text-6xl lg:text-8xl font-semibold  mb-6 leading-tight max-w-7xl bg-gradient-to-tl from-black to-gray-300 bg-clip-text text-transparent"
           variants={fadeUp}
         >
           Turning Your Numbers into Actionable{" "}
@@ -125,13 +121,14 @@ const App = () => {
         <motion.div variants={fadeUp}>
           <LogoMarquee />
         </motion.div>
+        
       </motion.section>
 
       {[
-        { id: "About", Component: About_me },
+        // { id: "About", Component: About_me },
         { id: "Services", Component: Service_Section },
         { id: "About_Us", Component: About_Section },
-        { id: "Process", Component: Process_section },
+        // { id: "Process", Component: Process_section },
         { id: "Projects", Component: Past_Work_Section },
         { id: "Testimonial", Component: Testimonial_Section },
         { id: "Pricing", Component: Pricing_Section },

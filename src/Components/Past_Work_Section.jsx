@@ -53,7 +53,7 @@ const Past_Work_Section = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="relative group overflow-hidden rounded-2xl  bg-white1 transition-transform duration-300 hover:scale-[1.02]"
+            className="relative group overflow-hidden rounded-2xl  transition-transform duration-300 hover:scale-[1.02]"
           >
             {/* Image */}
             <img
@@ -70,11 +70,11 @@ const Past_Work_Section = () => {
             </div>
 
             {/* Text content */}
-            <div className="md:p-4 relative z-20 bg-white ">
+            <div className="md:p-4 relative z-20  px-1 ">
               <h3 className="md:text-xl text-sm font-bold mt-2 text-primary-text ">
                 {card.title}
               </h3>
-              <div className="flex flex-wrap items-center gap-3 mt-2 text-secondary-text sm:text-sm text-[12px]">
+              <div className="flex flex-wrap items-center gap-3 mt-2  text-secondary-text sm:text-sm text-[12px]">
                 {card.sub_title?.split(" ").slice(0, 12).join(" ") + (card.sub_title?.split(" ").length > 15 ? "..." : "")}
               </div>
 
