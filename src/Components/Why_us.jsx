@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import React, { useEffect, useState, useRef } from "react";
 import CountUp from "react-countup";
 
@@ -6,8 +7,9 @@ const About_Section = () => {
     {
       id: 1,
       name: "Creativity",
-      bgColor: "bg-purple-soft",
-      textColor: "text-purple-primary",
+      description: "We craft innovative solutions with imagination and originality.",
+      bgColor: "bg-purple-100",
+      textColor: "text-purple-700",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path
@@ -21,8 +23,9 @@ const About_Section = () => {
     {
       id: 2,
       name: "Innovation",
-      bgColor: "bg-blue-soft",
-      textColor: "text-blue-500",
+      description: "Transforming fresh ideas into impactful, scalable products.",
+      bgColor: "bg-blue-100",
+      textColor: "text-blue-700",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path
@@ -36,8 +39,9 @@ const About_Section = () => {
     {
       id: 3,
       name: "Strategy",
-      bgColor: "bg-orange-soft",
-      textColor: "text-orange-primary",
+      description: "We align vision with data to guide every decision with clarity.",
+      bgColor: "bg-orange-100",
+      textColor: "text-orange-700",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path
@@ -49,6 +53,7 @@ const About_Section = () => {
       ),
     },
   ];
+
 
   const statistics = [
     { id: 1, number: 20, label: "Clients Helped", hasPlus: true },
@@ -92,24 +97,34 @@ const About_Section = () => {
       {/* Skills Header */}
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-3xl lg:text-5xl font-semibold text-primary-text md:px-10 mb-12">
-          Why Us ?</h2>
+          Why <span className="font-instrument-serif italic">Us ?</span></h2>
 
         <p className="text-lg md:text-xl text-secondary-text max-w-4xl mx-auto mb-12">
           We empower decision-makers with meaningful metrics and strategic support, driven by Creativity, Innovation, and proven Strategy.
         </p>
 
         {/* Skill Tags */}
-        <div className="flex flex-wrap justify-center gap-5 md:gap-10">
+        <div className="flex flex-wrap justify-center gap-8 ">
           {skills.map((skill) => (
             <div
               key={skill.id}
-              className={`${skill.bgColor} ${skill.textColor} px-8 py-4 font-instrument-serif font-medium rounded-full text-4xl italic flex items-center gap-2 hover:scale-105 transition-transform duration-200 cursor-pointer`}
+              className="w-full max-w-xs rounded-2xl border border-neutral-300 bg-white dark:bg-neutral-900 shadow-md p-6 text-center transition-shadow duration-300"
             >
-              {skill.icon}
-              {skill.name}
+              <div
+                className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full ${skill.bgColor} ${skill.textColor}`}
+              >
+                {skill.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-800 dark:text-white mb-2">
+                {skill.name}
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                {skill.description}
+              </p>
             </div>
           ))}
         </div>
+
       </div>
 
       {/* Stats Grid */}

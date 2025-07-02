@@ -1,11 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
+@font-face{
+  font-family: "Montserrat";
+   src: url("../src/assets/font/Montserrat-VariableFont_wght.ttf");
+
+}
+
+@font-face{
+  font-family: "Hey_Comic";
+   src: url("../src/assets/font/Hey Comic.ttf");
+   
+}
+
+
 @import "tailwindcss";
 
 @theme {
   --font-inter: "Inter", sans-serif;
   --font-instrument-serif: "Instrument Serif", serif;
+  --font-montserrat: "Montserrat", sans-serif;
 
   --color-primary: Black;
   --color-primary-text: black;

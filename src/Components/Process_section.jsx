@@ -32,7 +32,7 @@ const Process_section = () => {
       
     return (
         <section className='px-4 py-16 mx-auto max-w-7xl sm:px-6 ' id='Process'>
-            <h1 className='text-5xl text-center text-primary-text font-bold'>Our Process</h1>
+            <h1 className='text-5xl text-center text-primary-text font-bold'>From Insight to <span className='font-instrument-serif italic'>Impact</span></h1>
        
         <div className="relative overflow-hidden ">
             <div className="mt-2 md:mt-0   py-16 overflow-hidden">
