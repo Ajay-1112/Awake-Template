@@ -141,7 +141,7 @@ const Why_Us = () => {
               <div className="relative mb-4">
                 <div className="text-7xl md:text-9xl font-semibold text-primary-text mb-2 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
                   {stat.hasPlus && (
-                    <span className="text-4xl md:text-6xl absolute top-0  lg:-left-5 left-16 font-normal text-secondary-text ml-2">
+                    <span className="text-4xl md:text-6xl absolute top-0  lg:-left-5 left-6 font-normal text-secondary-text ml-2">
                       +
                     </span>
                   )}

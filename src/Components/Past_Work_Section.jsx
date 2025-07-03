@@ -36,8 +36,8 @@ const Past_Work_Section = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-7xl w-full py-10 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-7xl md:text-center md:mx-auto">
-          How we transformed a small <br />
+        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold text-center tracking-tight max-w-7xl md:text-center md:mx-auto">
+          How we transformed a small <br className="hidden md:inline" />
           business’s{" "}
           <span className="font-instrument-serif italic font-medium">
             online presence

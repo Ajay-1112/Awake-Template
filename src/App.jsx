@@ -63,8 +63,6 @@ const App = () => {
             Business Strategies
           </span>
         </motion.h1>
-
-
         <motion.p
           className="text-base md:text-lg lg:text-xl text-secondary-text  mb-8 max-w-3xl"
           variants={fadeUp}
@@ -121,7 +119,7 @@ const App = () => {
         <motion.div variants={fadeUp}>
           <LogoMarquee />
         </motion.div>
-        
+
       </motion.section>
 
       {[

@@ -1,24 +1,41 @@
 import React from "react";
+import clsx from "clsx";
 
-const Button = ({ text = "Let's Collaborate", link = "", className = "" }) => {
+const Button = ({
+  text = "Let's Collaborate",
+  link = "#",
+  className = "",
+}) => {
   return (
     <div className="inline-block">
       <a href={link}>
         <button
-          className={`
-            flex justify-around gap-3  relative overflow-hidden  
-             p-3 rounded-full  group
-            transition-all duration-300 
-            items-center  
-            shadow-lg hover:shadow-xl hover:scale-105
-            min-w-48
-            ${className}
-          `}
+          className={clsx(
+            `relative flex items-center justify-center overflow-hidden 
+            rounded-full px-6 py-3 min-w-52 font-medium transition-all duration-300 
+            group hover:scale-105 shadow-lg hover:shadow-xl pr-12 hover:pr-0`, 
+            className
+          )}
         >
-          <span className="relative z-10  font-medium">{text}</span>
-          <div className="w-7 h-7 bg-white1 rounded-full flex items-center justify-center group-hover:rotate-35 transition-transform duration-300">
+          {/* Sliding background */}
+          <span
+            className="absolute inset-0 z-0 w-0 h-full  rounded-full transition-all 
+            duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:w-full"
+          />
+
+          {/* Button text */}
+          <span className="relative z-10  transition-colors duration-300">
+            {text}
+          </span>
+
+          {/* Animated arrow icon */}
+          <span
+            className="absolute right-4 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center 
+            justify-center rounded-full border  transition-all duration-500 
+            ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:-translate-x-[145px]"
+          >
             <svg
-              className="w-4 h-4 text-gray-900"
+              className="w-4 h-"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -28,8 +45,7 @@ const Button = ({ text = "Let's Collaborate", link = "", className = "" }) => {
                 clipRule="evenodd"
               />
             </svg>
-          </div>
-          <div className="absolute inset-0 "></div>
+          </span>
         </button>
       </a>
     </div>
@@ -37,3 +53,4 @@ const Button = ({ text = "Let's Collaborate", link = "", className = "" }) => {
 };
 
 export default Button;
+ 
